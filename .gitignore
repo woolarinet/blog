@@ -51,3 +51,7 @@ yarn-error.log*
 
 # gitignore
 .gitignore
+
+# dist
+.dist
+var/
