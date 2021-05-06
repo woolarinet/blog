@@ -45,9 +45,9 @@
 }
 
 .title {
-  margin: 0;
+  /* margin: 0; */
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
@@ -56,8 +56,8 @@
 }
 
 .description {
-  line-height: 1.5;
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .code {
@@ -75,7 +75,10 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
-  margin-top: 3rem;
+  font-size: 30px;
+  /* margin: 0; */
+  color: #9080a6;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .card {

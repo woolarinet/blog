@@ -55,3 +55,7 @@ yarn-error.log*
 # dist
 .dist
 var/
+
+# sunho
+/public/favicon.png
+/public/sunhomusic_logo.png
