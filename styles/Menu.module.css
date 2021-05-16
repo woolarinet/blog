@@ -1,0 +1,21 @@
+.MenuBar {
+  font-size: 22px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-bottom: 0.5px solid grey;
+  width: 100%;
+  color: grey;
+}
+
+.Category {
+  position: relative;
+  bottom: 20px;
+  margin-left: 10px;
+}
+
+.Logo {
+  cursor: pointer;
+}
+
+.Items {
+  padding: 30px;
+}
