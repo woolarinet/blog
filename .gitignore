@@ -14,7 +14,7 @@
 
 # production
 /build
-/config
+
 # misc
 .DS_Store
 *.pem
@@ -59,9 +59,9 @@ var/
 # sunho
 /public/favicon.png
 /public/sunhomusic_logo.png
-/public/favicon-96x96.png
+/public/mainlogo.png
 
 exs/
 
 # config
-/config
+config/

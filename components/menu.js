@@ -9,7 +9,7 @@ const MenuBar = ({ children }) => {
       <div className={styles.MenuBar}>
         <span>
           <Link href="/">
-            <Image className={styles.Logo} src="/favicon-96x96.png" width={60} height={60} />
+            <Image className={styles.Logo} src="/mainlogo.png" width={60} height={60} />
           </Link>
         </span>
         <span className={styles.Category}>
