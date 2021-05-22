@@ -18,28 +18,80 @@
   min-height: 800px; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: 1px solid black;
+  justify-content: flex-end;
+  /* border: 1px solid black; */
   background-color: #d2c1eb;
-  height: 450px;
+  height: 360px;
+}
+.headerContent {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  /* border: 1px solid black; */
+}
+.msg {
+  /* float: left; */
+  font-size: 35px;
+  margin-left: 10px;
+  top: 0;
+  color: rgb(141, 97, 97);
+  /* border: 1px solid red; */
+}
+.msgAni {
+  position: relative;
+  display: inline-block;
+  margin-left: 15px;
+  /* border: 1px solid red; */
+  height: 20px; overflow: hidden;
+  animation: typing 2s steps(30, end) 1;
+}
+.msgAni::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 132px;
+  height: 13px;
+  top: 3px;
+  border-right: 1px solid black;
+  animation: cursor 0.5s step-end infinite;
 }
 
-.msg {
-  float: left;
-  font-size: 30px;
-  border: 1px solid red;
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 200px;
+  }
 }
-.activeMsg {
-  font-size: 15px;
+
+@keyframes cursor{
+  0%{opacity:0;}
+  50%{opacity:1;}
+  100%{opacity:0;}
 }
 
 .headerImg {
   float: right;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
-
-.headerImg img {
-  display: block;
+.headerAni {
+  float: right;
+  right: 140px;
+  animation: updown 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0.3s;
+  position: absolute;
+}
+@keyframes updown {
+  0% {
+    bottom: 95%;
+  }
+  100% {
+    bottom: 100%;
+  }
 }
 
 .footer {

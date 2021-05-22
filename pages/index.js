@@ -15,12 +15,22 @@ const HomePage = ({ blogs }) => {
       </Head>
       <AppBar />
       <main className={styles.main}>
-        <div className={styles.headerImg}>
-          <Image src="/human.png" width={300} height={300} />
-        </div>
-        <div className={styles.msg}>
-          <div>안녕하세요,</div>
-          <div>메롱메롱메롱메롱</div>
+        <div className={styles.headerContent}>
+          <div className={styles.headerImg}>
+            <div className={styles.headerAni}>
+              <Image src="/tag.png" width={50} height={50} />
+            </div>
+            <div>
+              <Image src="/human.png" width={400} height={300} />
+            </div>
+          </div>
+          <div className={styles.msg}>
+            안녕하세요,
+          </div>
+          <br />
+          <div className={styles.msgAni}>
+            개발자 박정우입니다.
+          </div>
         </div>
       </main>
       <div>
