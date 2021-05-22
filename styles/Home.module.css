@@ -1,4 +1,4 @@
-.container {
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -6,15 +6,40 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
 
 .main {
-  padding: 5rem 0;
+  /* padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 800px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: #d2c1eb;
+  height: 450px;
+}
+
+.msg {
+  float: left;
+  font-size: 30px;
+  border: 1px solid red;
+}
+.activeMsg {
+  font-size: 15px;
+}
+
+.headerImg {
+  float: right;
+  border: 1px solid blue;
+}
+
+.headerImg img {
+  display: block;
 }
 
 .footer {

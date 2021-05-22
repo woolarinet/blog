@@ -1,42 +1,38 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../styles/Menu.module.css'
+import PropTypes from 'prop-types'
+import Image from 'next/image'
 
-const MenuBar = ({ children }) => {
-  return (
-    <>
-      <div className={styles.MenuBar}>
-        <span>
-          <Link href="/">
-            <Image className={styles.Logo} src="/mainlogo.png" width={60} height={60} />
-          </Link>
-        </span>
-        <span className={styles.Category}>
-          <span className={styles.Items}>
-            <Link href="/about">
-              소개
-            </Link>
-          </span>
-          <span className={styles.Items}>
-            <Link href="/blog">
-              블로그
-            </Link>
-          </span>
-          <span className={styles.Items}>
-            <Link href="/project">
-              프로젝트
-            </Link>
-          </span>
-          <span className={styles.Items}>
-            <Link href="https://www.github.com/woolarinet">
-              Github
-            </Link>
-          </span>
-        </span>
-      </div>
-    </>
-  )
+const AppBar = ({ children }) => {
+    return (
+      <>
+          <div className="AppBar">
+              <div className="container">
+                  <div className="container-left clearfix">
+                    <div className="logo">
+                      <Link href="/"><a><Image
+                        src="/mainlogo.png"
+                        alt="logo"
+                        width={50}
+                        height={50}
+                      /></a></Link>
+                    </div>
+                    <div className="menu clearfix">
+                      <div className="menu-item"><Link href="/"><a>소개</a></Link></div>
+                      <div className="menu-item"><Link href="/project"><a>프로젝트</a></Link></div>
+                      <div className="menu-item"><Link href="/blog"><a>블로그</a></Link></div>
+                      <div className="menu-item"><Link href="https://github.com/woolarinet"><a>깃허브</a></Link></div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        {children}
+      </>
+    )
+  }
+
+AppBar.propTypes = {
+  children: PropTypes.node.isRequired,
 }
-
-export default MenuBar
+  
+export default AppBar
