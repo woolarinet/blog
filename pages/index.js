@@ -33,7 +33,70 @@ const HomePage = ({ blogs }) => {
           </div>
         </div>
       </main>
-      <div>
+      <section className={styles.category}>
+        <div className={styles.categoryTitle}>
+          <div>Skills</div>
+        </div>
+        <div className={styles.categorySub}>
+          웹 개발 관련 간략 기술 스택입니다.<br />
+          더 자세한 내용은 소개 페이지에서 확인 가능합니다.
+        </div>
+        <ul className={styles.skillImg}>
+          <li>
+            <div>
+              <Image src="/frontend.png" width={80} height={80} />
+              <h3>Frontend</h3>
+            </div>
+            <p>HTML, CSS<br />Vue, React SPA 개발</p>
+          </li>
+          <li>
+            <div>
+              <Image src="/backend.png" width={80} height={80} />
+              <h3>Backend</h3>
+            </div>
+            <p>Nginx 웹서버 구축, NodeJS API 구축<br />MYSQL DB 스키마 설계, Sequelize</p>
+          </li>
+          <li>
+            <div>
+              <Image src="/server.png" width={80} height={80} />
+              <h3>Devops</h3>
+            </div>
+            <p>Linux, AWS 서버구축<br />S3, RDS, 53, 로드밸런서 활용 배포</p>
+          </li>
+        </ul>
+      </section>
+      <section className={styles.project}>
+        <div className={styles.projectSolo}>
+          <a href="/project">
+            <h3>개인 프로젝트</h3>
+            <p>다양한 기술을 습득하며 개발한 포트폴리오 입니다.</p>
+            <p>학습용, 간단한 서비스 등의 개발활동 입니다.</p>
+          </a>
+        </div>
+      </section>
+      {/* <section className={styles.category}>
+        <div className={styles.categoryTitle}>
+          <div>Project</div>
+        </div>
+        <div className={styles.categorySub}>
+          학습 및 간단한 서비스 등의 개발을 담은 포트폴리오 입니다.
+        </div>
+        <div className={styles.blogContent}>
+
+        </div>
+      </section> */}
+      <section className={styles.category}>
+        <div className={styles.categoryTitle}>
+          <div>Blog</div>
+        </div>
+        <div className={styles.categorySub}>
+          기초 CS 개념 및 자격증과 개발에 관한 공부내용을 기록하고 있습니다.
+        </div>
+        <div className={styles.blogContent}>
+
+        </div>
+      </section>
+      {/* <div>
         <h1 className={styles.title}>
           Welcome to PKK Blog~
         </h1>
@@ -49,7 +112,7 @@ const HomePage = ({ blogs }) => {
             ))}
           </ul>
         </div>
-      </div>
+      </div> */}
       <footer className={styles.footer}>
         <a
           href="https://www.sunhomusic.com"

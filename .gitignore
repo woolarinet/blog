@@ -62,6 +62,9 @@ var/
 /public/mainlogo.png
 /public/human.png
 /public/tag.png
+/public/frontend.png
+/public/backend.png
+/public/server.png
 
 exs/
 
