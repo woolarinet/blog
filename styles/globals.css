@@ -70,3 +70,52 @@ a {
   display: block;
   clear: both;
 }
+
+.footerContainer {
+  background-color: #333333;
+  width: 100%px;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 40px 30px;
+}
+
+.footerContents {
+  color: lightgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightslategrey;
+}
+
+.footerContents p {
+  display: inline;
+  margin: 0 30px;
+  color: lightslategrey;
+}
+
+.footerContents ul {
+  list-style: none;
+}
+
+.footerContents ul li {
+  float: left;
+  padding:3px;
+  margin-right: 3px;
+}
+
+.info {
+  color: #b2bbc3;
+  line-height: 18px;
+  font-weight: 300;
+  letter-spacing: -.5px;
+  margin-top: 5px;
+  line-height: 22px;
+}
+
+.info p{
+  display: inline;
+  margin: 0 10px;
+  color: lightslategrey;
+}

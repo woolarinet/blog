@@ -27,6 +27,54 @@ const AppBar = ({ children }) => {
               </div>
           </div>
         {children}
+        <footer className="footerContainer">
+          <div className="footerContents">
+            <span>sunho</span>
+            {/* 링크 */}
+            <ul className="footerLinks">
+              <li className="mail">
+                <Link href="/"><a><Image
+                        src="/mail.png"
+                        alt="mail"
+                        width={20}
+                        height={20}
+                /></a></Link>
+              </li>
+              <li className="kakao">
+                <Link href="/"><a><Image
+                        src="/kakao.png"
+                        alt="kakao"
+                        width={20}
+                        height={20}
+                /></a></Link>
+              </li>
+              <li className="sns">
+                <Link href="/"><a><Image
+                        src="/git.png"
+                        alt="github"
+                        width={20}
+                        height={20}
+                /></a></Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="info">
+            <span>
+              박정우 
+              <p>|</p> 
+              이메일 &nbsp;
+              zerozzung@gmail.com 
+              <p>|</p> 
+              카카오톡 &nbsp;
+              jw95127985 
+              <p>|</p> 
+              깃허브 &nbsp;
+              woolarinet
+            </span>
+            <div>Copyright ⓒ 2021 sunho All Rights Reserved.</div>
+          </div>
+        </footer>
       </>
     )
   }
