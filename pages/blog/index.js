@@ -3,8 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import axios from 'axios'
-import AppBar from '../components/menu'
+import AppBar from '../../components/menu'
 import styles from '/styles/Blog.module.css'
+import ReactHtmlParser from 'react-html-parser'
 
 const Blog = ({ blogs, cate, cnt }) => {
   return (
@@ -72,7 +73,7 @@ const Blog = ({ blogs, cate, cnt }) => {
                         </div>
                         <div className={styles.postContent}>
                           <p>
-                            {lst.content}
+                            {ReactHtmlParser(lst.content)}
                           </p>
                         </div>
                         <br />

@@ -83,6 +83,7 @@
   border: 0.5px solid lightgray;
   border-radius: 2%;
   text-align: center;
+  /* border: 1px solid blue; */
 }
 
 .postImg {

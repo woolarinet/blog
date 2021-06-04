@@ -1,0 +1,29 @@
+.Editor {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+.title {
+  /* margin: 0 auto; */
+  margin-top: 50px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.content {
+  min-height: 500px;
+  border-color: transparent;
+}
+.submit {
+  display: block;
+  float: right;
+}
+
+.back {
+  display: block;
+  float: left;
+}
