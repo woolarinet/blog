@@ -36,6 +36,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Todo
 
 - [ ] ssr problem
-- [ ] image upload to S3
+- [ ] upload image to S3
 - [ ] update & delete
 - [ ] api sync
