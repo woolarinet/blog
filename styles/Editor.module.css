@@ -1,16 +1,39 @@
+
 .Editor {
   text-align: center;
   width: 90%;
   margin: 0 auto;
-  min-height: 500px;
+  min-height: 800px;
+}
+
+.Editor button {
+  border: 1px solid #9080a6;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #9080a6;
+  margin-top: 5px;
+  min-height: 30px;
+}
+
+.Editor button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.category {
+  margin-top: 50px;
+  width: 150px;
+  height: 30px;
+  float: left;
+  border: 0.5px solid #9080a6;
+  border-radius: 5px;
 }
 
 .title {
   /* margin: 0 auto; */
-  margin-top: 50px;
   width: 100%;
   height: 40px;
-  border: 1px solid #333;
+  border: 1px solid #9080a6;
   border-radius: 5px;
 }
 
@@ -18,6 +41,7 @@
   min-height: 500px;
   border-color: transparent;
 }
+
 .submit {
   display: block;
   float: right;

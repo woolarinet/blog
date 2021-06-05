@@ -9,7 +9,7 @@ import dynamic from 'next/dynamic'
 
 const Editor = dynamic(() => import('../../components/editor'), {ssr: false})
 
-const Create = ({ blogs, cate, cnt }) => {
+const Create = ({ cate }) => {
   return (
     <div>
       <Head>
@@ -20,7 +20,7 @@ const Create = ({ blogs, cate, cnt }) => {
 
       <body>
         <AppBar>
-          <Editor />
+          <Editor category={cate} />
         </AppBar>
       </body>
     </div>
@@ -28,12 +28,11 @@ const Create = ({ blogs, cate, cnt }) => {
 }
 
 Create.getInitialProps = async () => {
-  const response = await axios.get('http://localhost:3000/api/blog')
+  const response = await axios.get('http://localhost:3000/api/cate')
   const data = response.data
+  console.log('\n\n\n\n', data, '\n\n\n\n\n')
   return {
-    blogs : data.post,
-    cate: data.cate,
-    cnt: data.cnt,
+    cate: data,
   }
 }
 

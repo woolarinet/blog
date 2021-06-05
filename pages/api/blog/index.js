@@ -22,7 +22,6 @@ export default async function blog(req, res) {
       console.log(result[0]['COUNT(*)'])
       cnt = result[0]['COUNT(*)']
       const final = { post, cate, cnt }
-      // console.log(final)
       res.status(200).json(final)
       return resolve()
     })

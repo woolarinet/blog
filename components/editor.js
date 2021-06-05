@@ -6,8 +6,9 @@ import Link from 'next/link'
 import ReactHtmlParser from 'react-html-parser'
 import axios from 'axios'
 
-const Editor = ({}) => {
+const Editor = (props) => {
   const [ post, setPost ] = useState({
+    category: '',
     title: '',
     content: '',
   })
@@ -22,21 +23,34 @@ const Editor = ({}) => {
   }
   const submitPost = async () => {
     await axios.post('http://localhost:3000/api/blog/create', {
+      category: post.category,
       title: post.title,
       content: post.content,
     }).then(() => {
       alert('등록이 완료되었습니다.')
+      location.replace('/blog')
     })
   }
   return (
     <>
       <div className={styles.Editor}>
-        {viewPost.map(element => 
-          <div>
-            {element.title}
-            {ReactHtmlParser(element.content)}
-          </div>
-        )}
+        <div>
+          <select
+            className={styles.category}
+            name="category"
+            onChange={getValue}
+          >
+            <option value="">카테고리 선택</option>
+            {props.category.map((lst) => (
+              <option
+                value={lst.name}
+                key={lst.id}
+              >
+                {lst.name}
+              </option>
+            ))}
+          </select>
+        </div>
         <div>
           <input
             className={styles.title}
@@ -46,12 +60,25 @@ const Editor = ({}) => {
             name="title"
           />
         </div>
+        <br />
         <div>
           <CKEditor
               editor={ ClassicEditor }
-              data="<p>Hello from CKEditor 5!</p>"
+              data=""
               onReady={ editor => {
                   // You can store the "editor" and use when it is needed.
+                  editor.editing.view.change(writer => {
+                    writer.setStyle(
+                      "min-height",
+                      "400px",
+                      editor.editing.view.document.getRoot()
+                    )
+                    writer.setStyle(
+                      "border",
+                      "1px solid #9080a6",
+                      editor.editing.view.document.getRoot()
+                    )
+                  })
                   console.log( 'Editor is ready to use!', editor )
               } }
               onChange={ ( event, editor ) => {
@@ -86,5 +113,14 @@ const Editor = ({}) => {
     </>
   )
 }
+
+// Editor.getInitialProps = async () => {
+//   const response = await axios.get('http://localhost:3000/api/cate')
+//   const data = response.data
+//   console.log('\n\n\n\n', data, '\n\n\n\n\n')
+//   return {
+//     cate: data,
+//   }
+// }
 
 export default Editor
