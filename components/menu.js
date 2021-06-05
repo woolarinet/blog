@@ -34,7 +34,7 @@ const AppBar = ({ children }) => {
             <ul className="footerLinks">
               <li className="mail">
                 <Link href="/"><a><Image
-                        src="/mail.png"
+                        src="/images/mail.png"
                         alt="mail"
                         width={20}
                         height={20}
@@ -42,7 +42,7 @@ const AppBar = ({ children }) => {
               </li>
               <li className="kakao">
                 <Link href="/"><a><Image
-                        src="/kakao.png"
+                        src="/images/kakao.png"
                         alt="kakao"
                         width={20}
                         height={20}
@@ -50,7 +50,7 @@ const AppBar = ({ children }) => {
               </li>
               <li className="sns">
                 <Link href="/"><a><Image
-                        src="/git.png"
+                        src="/images/git.png"
                         alt="github"
                         width={20}
                         height={20}

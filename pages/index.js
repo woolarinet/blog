@@ -21,10 +21,10 @@ const HomePage = ({ blogs }) => {
             <div className={styles.headerContent}>
               <div className={styles.headerImg}>
                 <div className={styles.headerAni}>
-                  <Image src="/tag.png" width={50} height={50} />
+                  <Image src="/images/tag.png" width={50} height={50} />
                 </div>
                 <div>
-                  <Image src="/human.png" width={400} height={300} />
+                  <Image src="/images/human.png" width={400} height={300} />
                 </div>
               </div>
               <div className={styles.msg}>
@@ -47,21 +47,21 @@ const HomePage = ({ blogs }) => {
             <ul className={styles.skillImg}>
               <li>
                 <div>
-                  <Image src="/frontend.png" width={80} height={80} />
+                  <Image src="/images/frontend.png" width={80} height={80} />
                   <h3>Frontend</h3>
                 </div>
                 <p>HTML, CSS<br />Vue, React SPA 개발</p>
               </li>
               <li>
                 <div>
-                  <Image src="/backend.png" width={80} height={80} />
+                  <Image src="/images/backend.png" width={80} height={80} />
                   <h3>Backend</h3>
                 </div>
                 <p>Nginx 웹서버 구축, NodeJS API 구축<br />MYSQL DB 스키마 설계, Sequelize</p>
               </li>
               <li>
                 <div>
-                  <Image src="/server.png" width={80} height={80} />
+                  <Image src="/images/server.png" width={80} height={80} />
                   <h3>Devops</h3>
                 </div>
                 <p>Linux, AWS 서버구축<br />S3, RDS, 53, 로드밸런서 활용 배포</p>
@@ -90,35 +90,6 @@ const HomePage = ({ blogs }) => {
 
             </div>
           </section>
-          {/* <div>
-            <h1 className={styles.title}>
-              Welcome to PKK Blog~
-            </h1>
-            <p className={styles.description}>
-              This blog is made by
-            </p>
-            <div className={styles.grid}>
-              <ul>
-                {blogs.map((lst) => (
-                  <li key={lst.id}>
-                    <span>{lst.name}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div> */}
-          {/* <footer className={styles.footer}>
-            <a
-              href="https://www.sunhomusic.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Powered by{' '}
-              <span className={styles.logo}>
-                <Image src="/sunhomusic_logo.png" alt="Vercel Logo" width={130} height={16} />
-              </span>
-            </a>
-          </footer> */}
         </AppBar>
       </body>
     </div>

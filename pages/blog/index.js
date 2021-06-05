@@ -65,7 +65,7 @@ const Blog = ({ blogs, cate, cnt }) => {
                     {blogs.map((lst) => (
                       <div className={styles.postInfo} key={lst.id}>
                         <div className={styles.postImg}>
-                          <Image src="/backend.png" width={300} height={300} />
+                          <Image src="/images/backend.png" width={300} height={300} />
                         </div>
                         <br />
                         <div className={styles.postTitle}>
