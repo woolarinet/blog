@@ -1,0 +1,351 @@
+/* COMMON */
+.container {
+}
+#section_line {
+    border-bottom: 1px solid #ebebeb;
+    width: auto;
+}
+
+/* PATH */
+.location {
+    /* border: 5px solid green; */
+    padding: 0 40px;
+    margin-top: 20px;
+}
+.location p {
+    font-size: 12px;
+    line-height: 160%;
+}
+.location p span {
+    margin: 0 5px;
+}
+.location .arrow {
+    position: relative;
+}
+.location .arrow::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #121212;
+    border-right: 2px solid #121212;     
+    font-size: 100;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+}
+.location p span:last-child {
+    color: #004abf;;
+}
+
+
+/* TITLE */
+.title {
+    box-sizing: border-box;
+    padding: 0 40px;
+    /* border: 5px solid blueviolet; */
+}
+.title h2 {
+    font-size: 24PX;
+    font-weight: 300;
+}
+
+/* KEYWORD */
+.keywords {
+    box-sizing: border-box;
+    padding: 0 40px;
+    /* border: 5px solid green; */
+}
+.keywords div {
+    box-sizing: border-box;
+    position: relative;
+}
+.keywords .kwimages {
+    text-align: center;
+}
+.keywords ul {
+    list-style: none;
+    text-align: left;
+}
+.keywords li {
+    padding: 10px;
+    width: 140px;
+    display: inline-block;
+    background: #f2f2f2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 72px;
+    left: -36px;
+}
+.keywords li:last-child {
+    margin-right: none;
+}
+.keywords li p {
+    text-align: center;
+    font-size: 14px;
+    margin: 2px 0 0 0;
+    line-height: 160%;
+}
+
+
+/* INTRODUCE */
+.introduce {
+    padding: 40px;
+    /* border: 5px solid tomato; */
+}
+.introduce h2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.introduce p {
+    font-size: 14px;
+    line-height: 70%;
+}
+
+
+/* SKILLS */
+.skills {
+    padding: 0 40px;
+    margin-top: 60px;
+    /* border: 5px solid springgreen; */
+    position: relative;
+}
+.skills h2 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.skills p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 70%;
+}
+.skills .category {
+    margin-top: 50px;
+    display: flex;
+    /* border: 5px solid blueviolet; */
+}
+.skills .category .detail {
+    font-size: initial;
+    box-sizing: border-box;
+    /* border: 5px solid blanchedalmond; */
+    width: 350px;
+}
+.skills .category .detail .default {
+    display: flex;
+}
+.skills .category .detail .default .defaultImg {
+    margin-right: 15px;
+}
+.skills .category .detail .default img {
+    opacity: 0.7;
+    width: 84px;
+}
+.skills .category .detail .default h3 {
+    font-weight: 300;
+}
+.skills .category .detail .default p {
+    font-size: 16px;
+    line-height: 50%;
+    font-weight: 200;
+}
+.skills .category .detail > div {
+    height: 100%;
+    align-items: center;
+}
+
+.skills .category .list {
+    /* border: 5px solid brown; */
+    padding: 0 0 0 40px;
+    width: 70%;
+    position: relative;
+}
+.skills .category .list ul {
+    list-style: none;
+}
+.skills .category .list li {
+    width: 50%;
+    display: inline-block;
+    margin: 0 0 28px 0;
+    height: 48px;
+    /* border: 5px solid yellow; */
+}
+.skills .category .list .listImg {
+    /* border: 5px solid blue; */
+    float: left;
+    margin-right: 12px;
+}
+.skills .category .list .description {
+    /* border: 5px solid tomato; */
+    display: block;
+    float: left;
+    font-size: 14px;
+    position: relative;
+    bottom: 17px;
+}
+.skills .category .list .description h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: -1px;
+}
+.skills .category .list .description .desc {
+    font-size: 14px;
+}
+
+
+/* BRAND */
+.brand {
+    padding: 48px 40px;
+    /* border: 10px solid green; */
+}
+.brand h2 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.brand p {
+    font-size: 14px;
+    line-height: 80%;
+}
+.brand .identity {
+    width: 100%;
+    height: 700px;
+    /* border: 5px solid blue; */
+    background: url('../public/images/identity_pc.png')
+}
+.brand .logoBox {
+    display: flex;
+    margin: 32px 0 0 0;
+    /* border: 10px solid yellow; */
+}
+.brand .logoBox .bi {
+    /* border: 5px solid teal; */
+    width: 30%;
+    margin: 0 auto;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.brand .logoBox .bi .biImage {
+    height: 240px;
+    flex: 1;
+    text-align: center;
+    background: url('../public/images/bi.png');
+    background-repeat: no-repeat;
+}
+
+
+/* media */
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+
+    .location {
+        margin: 0 0 16px 0;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .keywords {
+        margin: 40px 0 0 0;
+    }
+    .keywords ul {
+        text-align: center;
+    }
+    .keywors li {
+        padding: 8px;
+        width: 80px;
+        margin: 0 14px 28px 14px;
+    }
+
+    .introduce {
+        padding: 40px 0;
+    }
+    .introduce h2 {
+        font-size: 20px;
+    }
+    .introduce p {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .skills {
+        padding: 48px 0;
+    }
+    .skills h2 {
+        font-size: 20px;
+    }
+    .skills p {
+        font-size: 14px;
+        line-height: 140%;
+    }
+    .skills .category {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .skills .category .detail {
+        margin-bottom: 32px;
+    }
+    .skills .category .detail .default {
+        padding: 0 4px;
+    }
+    .skills .category .detail .default h3 {
+        font-size: 16px;
+    }
+    .skills .category .detail .default p {
+        font-size: 14px;
+        margin-bottom: none;
+    }
+    .skills .category .detail .default .defaultImg {
+        width: 40px;
+    }
+    
+    .skills .category .list {
+        width: 100%;
+        padding: 0px;
+    }
+    .skills .category .list ul {
+        padding: 0 4px;
+    }
+    .skills .category .list li {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .skills .category .list .listImg {
+        margin: 0 16px 0 0;
+        width: 36px;
+    }
+
+    .brand {
+        padding: 48px 0;
+    }
+    .brand h2 {
+        font-size: 20px;
+    }
+    .brand p {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+    .brand .identity {
+        width: 100%;
+        background: url('../public/images/identity_mobile.png');
+        background-repeat: no-repeat;
+    }
+
+    .brand .logoBox {
+        flex-direction: column;
+    }
+    .brand .logoBox .bi {
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .brand .logoBox .bi .biImage {
+        background: url('../public/images/bi.png');
+        background-repeat: no-repeat;
+    }
+}

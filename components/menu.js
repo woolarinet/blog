@@ -18,7 +18,7 @@ const AppBar = ({ children }) => {
                       /></a></Link>
                     </div>
                     <div className="menu clearfix">
-                      <div className="menu-item"><Link href="/"><a>소개</a></Link></div>
+                      <div className="menu-item"><Link href="/about"><a>소개</a></Link></div>
                       <div className="menu-item"><Link href="/project"><a>프로젝트</a></Link></div>
                       <div className="menu-item"><Link href="/blog"><a>블로그</a></Link></div>
                       <div className="menu-item"><Link href="https://github.com/woolarinet"><a>깃허브</a></Link></div>
