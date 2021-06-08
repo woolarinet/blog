@@ -69,7 +69,9 @@ const Blog = ({ blogs, cate, cnt }) => {
                         </div>
                         <br />
                         <div className={styles.postTitle}>
-                          {lst.title}
+                          <Link href={`/blog/${lst.id}`}>
+                            {lst.title}
+                          </Link>
                         </div>
                         <div className={styles.postContent}>
                           <p>

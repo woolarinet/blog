@@ -1,10 +1,7 @@
 import React, {useState} from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import axios from 'axios'
 import AppBar from '../../components/menu'
-import styles from '/styles/Blog.module.css'
 import dynamic from 'next/dynamic'
 
 const Editor = dynamic(() => import('../../components/editor'), {ssr: false})
