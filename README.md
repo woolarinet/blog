@@ -39,3 +39,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] upload image to S3
 - [ ] update & delete
 - [ ] api sync
+- [ ] layout of dynamic pages (blog, project)
