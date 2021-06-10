@@ -1,5 +1,6 @@
 .blogContainer {
   width: 100%;
+  min-height: 800px;
   padding: 25px;
 }
 
@@ -39,6 +40,7 @@
 
 .listLayout aside {
   flex-basis: 200px;
+  min-height: 800px;
   flex-grow: 0;
   flex-shrink: 0;
   background-color: #e0d4f3;

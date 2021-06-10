@@ -8,12 +8,13 @@ export default async (req, res) => {
   const cate = await blogFunctions.getList(sql_cate)
   const post = await blogFunctions.getList(sql_post)
   const count = await blogFunctions.getList(sql_cnt)
+  console.log('???:', count[0]['COUNT(*)'])
 
   if (cate !== false && post !== false && count !== false) {
     res.status(200).json({
       cate,
       post,
-      cnt: count['COUNT(*)']
+      cnt: count[0]['COUNT(*)']
     })
   } else {
     res.status(400).end('FAIL')

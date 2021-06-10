@@ -6,26 +6,26 @@ import Image from 'next/image'
 const AppBar = ({ children }) => {
     return (
       <>
-          <div className="AppBar">
-              <div className="container">
-                  <div className="container-left clearfix">
-                    <div className="logo">
-                      <Link href="/"><a><Image
-                        src="/mainlogo.png"
-                        alt="logo"
-                        width={50}
-                        height={50}
-                      /></a></Link>
-                    </div>
-                    <div className="menu clearfix">
-                      <div className="menu-item"><Link href="/about"><a>소개</a></Link></div>
-                      <div className="menu-item"><Link href="/project"><a>프로젝트</a></Link></div>
-                      <div className="menu-item"><Link href="/blog"><a>블로그</a></Link></div>
-                      <div className="menu-item"><Link href="https://github.com/woolarinet"><a>깃허브</a></Link></div>
-                    </div>
+        <div className="AppBar">
+            <div className="container">
+                <div className="container-left clearfix">
+                  <div className="logo">
+                    <Link href="/"><a><Image
+                      src="/mainlogo.png"
+                      alt="logo"
+                      width={50}
+                      height={50}
+                    /></a></Link>
                   </div>
-              </div>
-          </div>
+                  <div className="menu clearfix">
+                    <div className="menu-item"><Link href="/about"><a>소개</a></Link></div>
+                    <div className="menu-item"><Link href="/project"><a>프로젝트</a></Link></div>
+                    <div className="menu-item"><Link href="/blog"><a>블로그</a></Link></div>
+                    <div className="menu-item"><Link href="https://github.com/woolarinet"><a>깃허브</a></Link></div>
+                  </div>
+                </div>
+            </div>
+        </div>
         {children}
         <footer className="footerContainer">
           <div className="footerContents">
