@@ -40,3 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] update & delete
 - [x] api sync
 - [ ] layout of dynamic pages (blog, project)
+- [ ] component page props
