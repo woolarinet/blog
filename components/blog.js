@@ -3,7 +3,7 @@ import styles from '/styles/Blog.module.css'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 
-const BlogLayout = (props, { children }) => {
+const BlogLayout = ({ children, cate }) => {
   return (
     <>
       <div className={styles.blogContainer}>
@@ -34,7 +34,7 @@ const BlogLayout = (props, { children }) => {
                 </div>
                 <br />
                 <div className={styles.subCategory}>
-                  {props.cate.map((lst) => (
+                  {cate.map((lst) => (
                     <div key={lst.id}>
                       <Link href="/">
                         <a>{lst.name}</a>
@@ -45,7 +45,7 @@ const BlogLayout = (props, { children }) => {
               </div>
             </aside>
             <article>
-              { children }
+              {children}
             </article>
           </div>
         </section>
@@ -55,7 +55,8 @@ const BlogLayout = (props, { children }) => {
 }
 
 BlogLayout.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
+  cate: PropTypes.node,
 }
 
 export default BlogLayout

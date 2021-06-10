@@ -14,7 +14,7 @@ export default async (req, res) => {
     res.status(200).json({
       cate,
       post,
-      cnt: count[0]['COUNT(*)']
+      cnt: count[0]['COUNT(*)'],
     })
   } else {
     res.status(400).end('FAIL')
