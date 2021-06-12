@@ -1,11 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import axios from 'axios'
 import AppBar from '../../components/menu'
-import styles from '/styles/Blog.module.css'
-import ReactHtmlParser from 'react-html-parser'
+import BlogLayout from '../../components/blog/layout'
+import BlogEntry from '../../components/blog/entry'
 
 const Blog = ({ blogs, cate, cnt }) => {
   return (
@@ -18,77 +16,9 @@ const Blog = ({ blogs, cate, cnt }) => {
 
       <body>
         <AppBar>
-          <div className={styles.blogContainer}>
-            <main className={styles.header}>
-              <div>
-                <br />
-                <br />
-                <div>
-                  블로그
-                </div>
-                <br />
-                <div>
-                  <div className={styles.headerDesc}>
-                    개발과 관련된 공부 내용들을<br />
-                    자세히 기록하고 있습니다.
-                  </div>
-                  <div className={styles.headerInfo}>
-                    총 게시글
-                    <p>{ cnt }건</p>
-                  </div>
-                </div>
-              </div>
-            </main>
-            <section>
-              <div className={styles.listLayout}>
-                <aside>
-                  <div className={styles.category}>
-                    <div>
-                      <Link href="/blog">
-                        <a>전체 보기</a>
-                      </Link>
-                    </div>
-                    <br />
-                    <div className={styles.subCategory}>
-                      {cate.map((lst) => (
-                        <div key={lst.id}>
-                          <Link href="/">
-                            <a>{lst.name}</a>
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </aside>
-                <article>
-                  <div className={styles.postBox}>
-                    {blogs.map((lst) => (
-                      <div className={styles.postInfo} key={lst.id}>
-                        <div className={styles.postImg}>
-                          <Image src="/images/backend.png" width={300} height={300} />
-                        </div>
-                        <br />
-                        <div className={styles.postTitle}>
-                          <Link href={`/blog/${lst.id}`}>
-                            {lst.title}
-                          </Link>
-                        </div>
-                        <div className={styles.postContent}>
-                          <p>
-                            {ReactHtmlParser(lst.content)}
-                          </p>
-                        </div>
-                        <br />
-                        <div className={styles.postDate}>
-                          {lst.date}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </article>
-              </div>
-            </section>
-          </div>
+          <BlogLayout cate={cate} cnt={cnt}>
+            <BlogEntry blogs={blogs} />
+          </BlogLayout>
         </AppBar>
       </body>
     </div>

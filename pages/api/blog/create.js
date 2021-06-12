@@ -5,7 +5,7 @@ export default async (req, res) => {
   const now = '2021-06-05 19:44:42'
   const sql = 'INSERT INTO blog_test (id, title, content, date) VALUES (?, ?, ?, ?)'
 
-  const val = [ 10, req.body.title, req.body.content, now ]
+  const val = [ 11, req.body.title, req.body.content, now ]
 
   const result = await blogFunctions.setToDB(sql, val)
   if (result !== false) {

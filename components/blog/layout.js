@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from '/styles/Blog.module.css'
 import Link from 'next/link'
+import axios from 'axios'
 import PropTypes from 'prop-types'
 
-const BlogLayout = ({ children, cate }) => {
+const BlogLayout = ({ children, cate, cnt }) => {
   return (
     <>
       <div className={styles.blogContainer}>
@@ -29,7 +30,7 @@ const BlogLayout = ({ children, cate }) => {
               <div className={styles.category}>
                 <div>
                   <Link href="/blog">
-                    <a>전체 보기</a>
+                    <a>전체 보기 ({cnt})</a>
                   </Link>
                 </div>
                 <br />
@@ -56,7 +57,8 @@ const BlogLayout = ({ children, cate }) => {
 
 BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  cate: PropTypes.node,
+  cate: PropTypes.node.isRequired,
+  cnt: PropTypes.number.isRequired,
 }
 
 export default BlogLayout
