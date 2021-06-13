@@ -57,7 +57,7 @@ const BlogLayout = ({ children, cate, cnt }) => {
 
 BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  cate: PropTypes.node.isRequired,
+  cate: PropTypes.node,
   cnt: PropTypes.number.isRequired,
 }
 

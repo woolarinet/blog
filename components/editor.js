@@ -1,9 +1,8 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
 import styles from '../styles/Editor.module.css'
 import Link from 'next/link'
-import ReactHtmlParser from 'react-html-parser'
 import axios from 'axios'
 
 const Editor = (props) => {
@@ -12,7 +11,7 @@ const Editor = (props) => {
     title: '',
     content: '',
   })
-  const [ viewPost, setViewPost ] = useState([])
+  
   const getValue = e => {
     const { name, value } = e.target
     setPost({
@@ -21,6 +20,7 @@ const Editor = (props) => {
     })
     console.log(post)
   }
+
   const submitPost = async () => {
     await axios.post('http://localhost:3000/api/blog/create', {
       category: post.category,
@@ -31,6 +31,7 @@ const Editor = (props) => {
       location.replace('/blog')
     })
   }
+
   return (
     <>
       <div className={styles.Editor}>

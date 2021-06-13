@@ -8,10 +8,12 @@ const BlogDetail = (props) => {
   return (
     <>
       <div>
+
         <section className={styles.title}>
           <h2>{props.detail.title}</h2>
           <div>{props.detail.date}</div>
         </section>
+
         <section className={styles.content}>
           <div className={styles.contentImg}>
             <Image src='/images/backend.png' width={100} height={100} />
@@ -20,11 +22,11 @@ const BlogDetail = (props) => {
             {ReactHtmlParser(props.detail.content)}
           </div>
         </section>
-        <section className={styles.comment}>
-          <div>
 
-          </div>
+        <section className={styles.comment}>
+          <div></div>
         </section>
+
       </div>
     </>
   )
