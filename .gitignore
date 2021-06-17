@@ -72,3 +72,7 @@ exs/
 # config
 config/
 homeIndex.js
+
+# eslint & prettier
+.eslintrc.json
+.prettierrc

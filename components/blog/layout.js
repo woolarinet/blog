@@ -9,6 +9,7 @@ const BlogLayout = ({ children, cate, cnt }) => {
   return (
     <>
       <div className={styles.blogContainer}>
+        {/* Header */}
         <main className={styles.header}>
           <div>
             <br />
@@ -24,8 +25,10 @@ const BlogLayout = ({ children, cate, cnt }) => {
             </div>
           </div>
         </main>
+        {/* Body */}
         <section>
           <div className={styles.listLayout}>
+            {/* Side Bar */}
             <aside>
               <div className={styles.category}>
                 <div>
@@ -45,6 +48,7 @@ const BlogLayout = ({ children, cate, cnt }) => {
                 </div>
               </div>
             </aside>
+            {/* Components (entry or detail) */}
             <article>
               {children}
             </article>

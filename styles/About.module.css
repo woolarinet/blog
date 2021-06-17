@@ -1,5 +1,4 @@
 /* COMMON */
-
 #section_line {
     border-bottom: 1px solid #ebebeb;
     width: auto;
@@ -99,7 +98,7 @@
 }
 .introduce p {
     font-size: 14px;
-    line-height: 70%;
+    line-height: 160%;
 }
 
 
@@ -117,7 +116,7 @@
 .skills p {
     font-size: 14px;
     margin-bottom: 16px;
-    line-height: 70%;
+    line-height: 160%;
 }
 .skills .category {
     margin-top: 50px;
@@ -204,7 +203,7 @@
 }
 .brand p {
     font-size: 14px;
-    line-height: 80%;
+    line-height: 160%;
 }
 .brand .identity {
     width: 100%;
@@ -301,7 +300,6 @@
     .skills .category .detail .default .defaultImg {
         width: 40px;
     }
-    
     .skills .category .list {
         width: 100%;
         padding: 0px;
