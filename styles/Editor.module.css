@@ -22,6 +22,7 @@
 
 .category {
   margin-top: 50px;
+  margin-bottom: 10px;
   width: 150px;
   height: 30px;
   float: left;
@@ -31,8 +32,16 @@
 
 .title {
   /* margin: 0 auto; */
+  margin-bottom: 10px;
   width: 100%;
   height: 40px;
+  border: 1px solid #9080a6;
+  border-radius: 5px;
+}
+
+.desc {
+  float: left;
+  width: 50%;
   border: 1px solid #9080a6;
   border-radius: 5px;
 }

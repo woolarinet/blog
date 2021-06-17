@@ -8,7 +8,6 @@ const BlogDetail = (props) => {
   return (
     <>
       <div>
-
         <section className={styles.title}>
           <h2>{props.detail.title}</h2>
           <div>{props.detail.date}</div>

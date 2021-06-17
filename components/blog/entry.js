@@ -15,13 +15,15 @@ const BlogEntry = (props) => {
             </div>
             <br />
             <div className={styles.postTitle}>
-              <Link href={`/blog/${lst.id}`}>
-                {lst.title}
-              </Link>
+              <div>
+                <Link href={`/blog/${lst.id}`}>
+                  {lst.title}
+                </Link>
+              </div>
             </div>
             <div className={styles.postContent}>
               <p>
-                {ReactHtmlParser(lst.content)}
+                {lst.desc}
               </p>
             </div>
             <br />

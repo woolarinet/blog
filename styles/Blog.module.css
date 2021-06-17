@@ -1,6 +1,6 @@
 .blogContainer {
   width: 100%;
-  min-height: 800px;
+  /* min-height: 800px; */
   padding: 25px;
 }
 
@@ -40,7 +40,7 @@
 
 .listLayout aside {
   flex-basis: 200px;
-  min-height: 800px;
+  /* min-height: 800px; */
   flex-grow: 0;
   flex-shrink: 0;
   background-color: #e0d4f3;
@@ -97,11 +97,15 @@
   font-size: 1.3rem;
   height: 80px;
   color:#9080a6;
-  cursor: pointer;
   /* border: 1px solid; */
 }
 
-.postTitle:hover {
+.postTitle div {
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+
+.postTitle div:hover {
   color: #d9cc8b;
 }
 
@@ -131,6 +135,7 @@
 .postDate {
   float: left;
   font-size: 12px;
+  /* border: 1px solid; */
 }
 
 .postTitle, .postDate {

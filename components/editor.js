@@ -9,9 +9,10 @@ const Editor = (props) => {
   const [ post, setPost ] = useState({
     category: '',
     title: '',
+    desc: '',
     content: '',
   })
-  
+
   const getValue = e => {
     const { name, value } = e.target
     setPost({
@@ -25,6 +26,7 @@ const Editor = (props) => {
     await axios.post('http://localhost:3000/api/blog/create', {
       category: post.category,
       title: post.title,
+      desc: post.desc,
       content: post.content,
     }).then(() => {
       alert('등록이 완료되었습니다.')
@@ -61,7 +63,16 @@ const Editor = (props) => {
             name="title"
           />
         </div>
-        <br />
+        <div>
+          <input
+            className={styles.desc}
+            type="text"
+            placeholder="설명"
+            onChange={getValue}
+            name="desc"
+          />
+        </div>
+        <br /><br />
         <div>
           <CKEditor
               editor={ ClassicEditor }
