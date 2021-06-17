@@ -14,13 +14,11 @@ const Blog = ({ blogs, cate, cnt }) => {
         <link rel="icon" href="/favicon.png?v=2" />
       </Head>
 
-      <body>
-        <AppBar>
-          <BlogLayout cate={cate} cnt={cnt}>
-            <BlogEntry blogs={blogs} />
-          </BlogLayout>
-        </AppBar>
-      </body>
+      <AppBar>
+        <BlogLayout cate={cate} cnt={cnt}>
+          <BlogEntry blogs={blogs} />
+        </BlogLayout>
+      </AppBar>
     </div>
   )
 }

@@ -15,11 +15,9 @@ const Create = ({ cate }) => {
         <link rel="icon" href="/favicon.png?v=2" />
       </Head>
 
-      <body>
-        <AppBar>
-          <Editor category={cate} />
-        </AppBar>
-      </body>
+      <AppBar>
+        <Editor category={cate} />
+      </AppBar>
     </div>
   )
 }
