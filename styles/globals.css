@@ -191,7 +191,7 @@ a {
     margin-left: -43px;
   }
   .info {
-    border: 3px solid green;
+    /* border: 3px solid green; */
   }
   .info p:first-child {
     display: block;
