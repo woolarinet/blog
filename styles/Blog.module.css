@@ -1,12 +1,14 @@
 .blogContainer {
   width: 100%;
   /* min-height: 800px; */
+  background-color: rgb(248, 239, 239);
   padding: 25px;
 }
 
 .header {
   min-height: 180px;
   color: #9080a6;
+  border-bottom: 0.1px solid #e0d4f3;
 }
 
 .headerDesc {
@@ -72,7 +74,7 @@
   flex-wrap: wrap;
   gap: 1em;
   padding: 10px;
-  /* background-color: #f0f0f0; */
+  /* background-color: white; */
   /* border: 1px solid red; */
 }
 
@@ -86,6 +88,7 @@
   border-radius: 2%;
   text-align: center;
   /* border: 1px solid blue; */
+  background-color: white;
 }
 
 .postImg {
@@ -141,4 +144,14 @@
 .postTitle, .postDate {
   padding: 10px;
   display: block;
+}
+
+#mobileCate {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  .listLayout aside {
+    display: none;
+  }
 }

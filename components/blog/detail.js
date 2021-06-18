@@ -7,7 +7,7 @@ import Image from 'next/image'
 const BlogDetail = (props) => {
   return (
     <>
-      <div>
+      <div className={styles.container}>
         {/* Title */}
         <section className={styles.title}>
           <h2>{props.detail.title}</h2>

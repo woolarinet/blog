@@ -52,9 +52,9 @@ const Footer = ({}) => {
       
         <div className="info">
           <span>
-            <p>{footerText.name} </p> 
-            <p> 이메일 </p> 
+            <p>{footerText.name} </p>
             <p>|</p> 
+            <p> 이메일 </p> 
             <p> {footerText.email} </p>
             <p>|</p> 
             <p>카카오톡 {footerText.kakao} </p>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 html,
 body {
   padding: 0;
@@ -26,7 +27,7 @@ a {
 }
 
 .container-left {
-  margin-left: 30px;
+  margin-left: 12px;
   padding: 5px 0;
 }
 
@@ -43,6 +44,7 @@ a {
 .menu {
   /* float: left; */
   /* border: 1px solid; */
+  font-family: 'Nanum Gothic', sans-serif;
   display: flex;
   list-style: none;
 }

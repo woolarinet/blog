@@ -4,9 +4,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 
-const Header = ({ children }) => {
+const Header = ({}) => {
   const [showLinks, setShowLinks] = useState(false);
-
   return (
     <>
       <div className="header">
@@ -38,8 +37,4 @@ const Header = ({ children }) => {
   );
 };
 
-Header.propTypes = {
-    children: PropTypes.node.isRequired,
-  }
-  
 export default Header;
