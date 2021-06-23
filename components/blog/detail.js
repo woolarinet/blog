@@ -20,6 +20,7 @@ const BlogDetail = (props) => {
           </div>
           <div className={styles.contentDetail}>
             {ReactHtmlParser(props.detail.content)}
+            {console.log(ReactHtmlParser(props.detail.content))}
           </div>
         </section>
         {/* Comment */}
