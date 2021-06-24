@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Head from 'next/head'
 import axios from 'axios'
-import AppBar from '../../components/menu'
 import dynamic from 'next/dynamic'
 
 const Editor = dynamic(() => import('../../components/editor'), {ssr: false})
