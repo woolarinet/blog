@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import Image from 'next/image'
 
 const BlogDetail = (props) => {
-  // const content = props.detail.content.replace(/\n/gi, '  \n')
+  const content = props.detail.content.replace(/\n/gi, '  \n')
   const Heading1 = ({node, ...props}) => <h1 style={{
         borderBottom: '4px double',
         paddingBottom: '1rem'
@@ -21,6 +21,12 @@ const BlogDetail = (props) => {
         padding: '1rem',
         border: '1px dashed black',
       }} {...props}
+    />
+  const imageStyle = ({node, ...props}) => <img style={{
+        width: '200px',
+        height: '200px'
+      }}
+      {...props}
     />
   return (
     <>
@@ -42,8 +48,9 @@ const BlogDetail = (props) => {
                 blockquote: BlockQuoteStyle,
                 h1: Heading1,
                 code: CodeBlock,
+                image: imageStyle,
               }}
-              children={props.detail.content}
+              children={content}
             ></ReactMarkdown>
           </div>
         </section>

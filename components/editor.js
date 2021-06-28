@@ -6,18 +6,32 @@ import Link from 'next/link'
 import axios from 'axios'
 
 const Editor = (props) => {
-  const handleFocus = () => {
-    console.log('focus?')
-  }
   const editorRef = useRef()
-
+  let blobChange = false
+  const uploadImg = async function (blob) {
+    let result = ''
+    try {
+      const formData = new FormData()
+      formData.append('img', blob)
+      const url = await axios.post('http://localhost:3000/api/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
+      result = url.data
+    } catch (err) {
+      console.log(err)
+      result = false
+    }
+    console.log(result)
+    return result
+  }
   const [ post, setPost ] = useState({
     category: '',
     title: '',
     desc: '',
     content: '',
   })
-
   const getValue = e => {
     const { name, value } = e.target
     setPost({
@@ -26,7 +40,6 @@ const Editor = (props) => {
     })
     console.log(post)
   }
-
   const submitPost = async () => {
     await axios.post('http://localhost:3000/api/blog/create', {
       category: post.category,
@@ -79,21 +92,31 @@ const Editor = (props) => {
       <br /><br />
       <div id="TUE">
         <TUEditor
-          initialValue="hello react editor world!"
-          previewStyle="none"
+          initialValue=""
+          previewStyle="vertical"
           height="550px"
           initialEditType="markdown"
-          onFocus={handleFocus}
           useCommandShortcut={true}
           ref={editorRef}
+          onFocus={() => {
+            editorRef.current.getInstance().removeHook('addImageBlobHook')
+            editorRef.current.getInstance().addHook('addImageBlobHook', async (blob, callback) => {
+              if (blobChange === false) {
+                const url = await uploadImg(blob)
+                callback(url.url, url.name)
+                blobChange = true
+                return false
+              } else {
+                return false
+              }
+            })
+          }}
           onChange={() => {
             const data = editorRef.current.getInstance().getMarkdown()
-            // const html_data = editorRef.current.getInstance().getHTML()
             setPost({
               ...post,
               content: data,
             })
-            console.log(post)
           }}
         />
       </div>
