@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '/styles/Post.module.css'
 import ReactMarkdown from 'react-markdown'
-import Image from 'next/image'
+import Link from 'next/link'
 
 const BlogDetail = (props) => {
   const content = props.detail.content.replace(/\n/gi, '  \n')
@@ -23,8 +23,7 @@ const BlogDetail = (props) => {
       }} {...props}
     />
   const imageStyle = ({node, ...props}) => <img style={{
-        width: '200px',
-        height: '200px'
+        maxWidth: '100%',
       }}
       {...props}
     />
@@ -38,20 +37,24 @@ const BlogDetail = (props) => {
         </section>
         {/* Content */}
         <section className={styles.content}>
-          <div className={styles.contentImg}>
-            <Image src='/images/backend.png' width={100} height={100} />
-          </div>
           <div className={styles.contentDetail}>
-            {/* {ReactHtmlParser(props.detail.content)} */}
             <ReactMarkdown
               components={{
                 blockquote: BlockQuoteStyle,
                 h1: Heading1,
                 code: CodeBlock,
-                image: imageStyle,
+                img: imageStyle,
               }}
               children={content}
             ></ReactMarkdown>
+          </div>
+          <div style={{
+            float: 'right',
+            border: '1px solid'
+          }}>
+            <Link href={`/blog/update/${props.detail.id}`}>
+              수정하기
+            </Link>
           </div>
         </section>
         {/* Comment */}
