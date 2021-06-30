@@ -36,12 +36,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Todo
 
 - [ ] ssr problem
-- [ ] upload image to S3
+- [x] upload image to S3
 - [ ] update & delete
 - [x] api sync
 - [ ] layout of dynamic pages (blog, project)
 - [x] component page props
 - [x] make all pages consist of only components
 - [x] insert into _app.js components (header, footer)
-- [ ] change CKEditor to Toast
+- [x] change CKEditor to Toast
 - [ ] comment CRUD
