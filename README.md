@@ -47,3 +47,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] comment CRUD
 - [ ] category mobile version
 - [x] update editor self problem (ssr)
+- [ ] thumbnail column

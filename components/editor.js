@@ -9,6 +9,7 @@ const imgList = []
 const Editor = (props) => {
   const editorRef = useRef()
   let blobChange = false
+  // 이미지 업로드 to s3
   const uploadImg = async function (blob) {
     let result = ''
     try {
@@ -29,13 +30,14 @@ const Editor = (props) => {
     console.log(imgList)
     return result
   }
+  // 상태 값 선언
   const [ post, setPost ] = useState({
     category: '',
     title: '',
     desc: '',
     content: '',
-    imgList: [],
   })
+  // 상태 값 입력
   const getValue = e => {
     const { name, value } = e.target
     setPost({
@@ -44,6 +46,7 @@ const Editor = (props) => {
     })
     console.log(post)
   }
+  // 최종 submit
   const submitPost = async () => {
     await axios.post('http://localhost:3000/api/blog/create', {
       category: post.category,
@@ -53,7 +56,7 @@ const Editor = (props) => {
       imgList: imgList,
     }).then(() => {
       alert('등록이 완료되었습니다.')
-      location.replace('/blog')
+      // location.replace('/blog')
     })
   }
 

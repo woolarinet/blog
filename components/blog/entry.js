@@ -12,7 +12,7 @@ const BlogEntry = (props) => {
           <div className={styles.postInfo} key={lst.id}>
             {/* Image */}
             <div className={styles.postImg}>
-              <Image src="/images/backend.png" width={300} height={300} />
+              <Image src={lst.thumb} width={200} height={200} />
             </div>
             <br />
             {/* Title */}
