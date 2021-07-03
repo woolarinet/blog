@@ -20,12 +20,12 @@ const BlogPost = ({ detail, cnt }) => {
 }
 
 BlogPost.getInitialProps = async (context) => {
-  console.log('???: ', context.query)
+  // console.log('???: ', context.query)
   const query = context.query.id
   const response = await axios.get(
     `http://localhost:3000/api/blog/${query}`
   )
-  console.log('블로그 정보는 : ', response.data)
+  // console.log('블로그 정보는 : ', response.data)
   return {
     detail: response.data,
     cnt: response.data.cnt

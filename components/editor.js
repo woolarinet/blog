@@ -4,6 +4,7 @@ import '@toast-ui/editor/dist/toastui-editor.css'
 import styles from '../styles/Editor.module.css'
 import Link from 'next/link'
 import axios from 'axios'
+const imgList = []
 
 const Editor = (props) => {
   const editorRef = useRef()
@@ -24,6 +25,8 @@ const Editor = (props) => {
       result = false
     }
     console.log(result)
+    imgList.push(result.url)
+    console.log(imgList)
     return result
   }
   const [ post, setPost ] = useState({
@@ -31,6 +34,7 @@ const Editor = (props) => {
     title: '',
     desc: '',
     content: '',
+    imgList: [],
   })
   const getValue = e => {
     const { name, value } = e.target
@@ -46,6 +50,7 @@ const Editor = (props) => {
       title: post.title,
       desc: post.desc,
       content: post.content,
+      imgList: imgList,
     }).then(() => {
       alert('등록이 완료되었습니다.')
       location.replace('/blog')

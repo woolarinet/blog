@@ -21,7 +21,6 @@ const Create = ({ cate }) => {
 Create.getInitialProps = async () => {
   const response = await axios.get('http://localhost:3000/api/blog/cate')
   const data = response.data
-  console.log('\n\n\n\n', data, '\n\n\n\n\n')
   return {
     cate: data,
   }

@@ -1,7 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 import axios from 'axios'
-import UpdateEditor from '../../../components/blog/update'
+import dynamic from 'next/dynamic'
+// import UpdateEditor from '../../../components/blog/update'
+
+const UpdateEditor = dynamic(() => import('../../../components/blog/update'), {ssr: false})
 
 const BlogUpdate = ({ detail }) => {
   return (

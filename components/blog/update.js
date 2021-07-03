@@ -1,13 +1,16 @@
 import React, { useState, useRef } from 'react'
-import { Editor as TUEditor, EditorProps } from "@toast-ui/react-editor"
+import { Editor as TUEditor } from "@toast-ui/react-editor"
 import '@toast-ui/editor/dist/toastui-editor.css'
 import styles from '/styles/Editor.module.css'
 import Link from 'next/link'
 import axios from 'axios'
+const imgList = []
 
 const UpdateEditor = ({ cate, info }) => {
   const editorRef = useRef()
   let blobChange = false
+
+  // 이미지 훅
   const uploadImg = async function (blob) {
     let result = ''
     try {
@@ -24,34 +27,49 @@ const UpdateEditor = ({ cate, info }) => {
       result = false
     }
     console.log(result)
+    imgList.push(result.url)
+    setPost({
+      ...post,
+      imgList: imgList,
+    })
+    console.log(post)
     return result
   }
+
+  // 상태 값 가져오기~!
   const [ post, setPost ] = useState({
-    category: '',
-    title: '',
-    desc: '',
+    category: '', // 카테고리 로직 추가해야함
+    title: info.title,
+    desc: info.desc,
     content: '',
+    imgList: [],
   })
+
+  // 입력 값 가져오기~
   const getValue = e => {
     const { name, value } = e.target
+    // console.log(e)
     setPost({
       ...post,
       [name]: value
     })
     console.log(post)
   }
+
+  // 수정 확인
   const submitPost = async () => {
-    await axios.post('http://localhost:3000/api/blog/update', {
+    await axios.post(`http://localhost:3000/api/blog/update?id=${info.id}`, {
       category: post.category,
       title: post.title,
       desc: post.desc,
       content: post.content,
+      imgList: post.imgList,
     }).then(() => {
       alert('등록이 완료되었습니다.')
       location.replace('/blog')
     })
   }
-
+  
   return(
     <div className={styles.Editor}>
       <div>
@@ -76,7 +94,7 @@ const UpdateEditor = ({ cate, info }) => {
           className={styles.title}
           type="text"
           placeholder="제목"
-          value={info.title}
+          value={post.title}
           onChange={getValue}
           name="title"
         />
@@ -86,7 +104,7 @@ const UpdateEditor = ({ cate, info }) => {
           className={styles.desc}
           type="text"
           placeholder="설명"
-          value={info.desc}
+          value={post.desc}
           onChange={getValue}
           name="desc"
         />

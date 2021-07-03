@@ -46,3 +46,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] change CKEditor to Toast
 - [ ] comment CRUD
 - [ ] category mobile version
+- [x] update editor self problem (ssr)

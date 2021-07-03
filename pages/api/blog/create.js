@@ -5,7 +5,7 @@ export default async (req, res) => {
   // console.log(req.body)
   const body = req.body
   const now = moment().format('YYYY-MM-DD HH:mm:ss')
-  // console.log(now)
+  // console.log(body.imgList)
   const sql = 'INSERT INTO blog_test (`title`, `desc`, `content`, `date`) VALUES (?, ?, ?, ?)'
 
   const val = [body.title, body.desc, body.content, now]
