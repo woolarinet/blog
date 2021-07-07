@@ -38,6 +38,7 @@ const UpdateEditor = ({ cate, info, img }) => {
     content: '',
     imgList: img,
   })
+  console.log(post, img, post.imgList)
 
   // 입력 값 가져오기~
   const getValue = e => {
@@ -131,6 +132,7 @@ const UpdateEditor = ({ cate, info, img }) => {
               ...post,
               content: data,
             })
+            console.log(post)
           }}
         />
       </div>

@@ -56,7 +56,7 @@ const Editor = (props) => {
       imgList: imgList,
     }).then(() => {
       alert('등록이 완료되었습니다.')
-      // location.replace('/blog')
+      location.replace('/blog')
     })
   }
 

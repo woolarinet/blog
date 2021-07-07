@@ -14,6 +14,7 @@ export default async (req, res) => {
   for (const i of imgList) {
     if (body.content.indexOf(i.url) === -1) {
       delList.push(i.url)
+      console.log(delList, 'del')
       // imgList.splice(imgList.indexOf(i), 1)
     } else {
       insertList.push({url: i.url, index: body.content.indexOf(i.url)})

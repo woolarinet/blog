@@ -12,6 +12,7 @@ export default async function blog(req, res) {
   const img = await blogFunctions.getList(sql_img)
   // const count = await blogFunctions.getList(sql_cnt)
 
+  console.log(img)
   if (result !== false) {
     res.status(200).json({
       id: result.id,
