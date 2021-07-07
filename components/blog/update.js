@@ -4,10 +4,12 @@ import '@toast-ui/editor/dist/toastui-editor.css'
 import styles from '/styles/Editor.module.css'
 import Link from 'next/link'
 import axios from 'axios'
-const imgList = []
+let imgList = []
 
-const UpdateEditor = ({ cate, info }) => {
+const UpdateEditor = ({ cate, info, img }) => {
   const editorRef = useRef()
+  imgList = img
+  console.log('img: : : ', img)
   let blobChange = false
 
   // 이미지 훅
@@ -22,17 +24,12 @@ const UpdateEditor = ({ cate, info }) => {
         },
       })
       result = url.data
+      imgList.push({url: result.url})
+      console.log(imgList)
     } catch (err) {
       console.log(err)
       result = false
     }
-    console.log(result)
-    imgList.push(result.url)
-    setPost({
-      ...post,
-      imgList: imgList,
-    })
-    console.log(post)
     return result
   }
 
@@ -42,7 +39,6 @@ const UpdateEditor = ({ cate, info }) => {
     title: info.title,
     desc: info.desc,
     content: '',
-    imgList: [],
   })
 
   // 입력 값 가져오기~
@@ -63,7 +59,7 @@ const UpdateEditor = ({ cate, info }) => {
       title: post.title,
       desc: post.desc,
       content: post.content,
-      imgList: post.imgList,
+      imgList: imgList,
     }).then(() => {
       alert('등록이 완료되었습니다.')
       location.replace('/blog')

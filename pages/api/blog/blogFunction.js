@@ -40,4 +40,18 @@ blogFunctions.setToDB = async function (sql, val) {
   return success
 }
 
+blogFunctions.delFromDB = async function (sql, val) {
+  console.log(sql)
+  let success = false
+  try {
+    const res = await db.query(sql)
+    console.log(res)
+    success = true
+  } catch (error) {
+    success = false
+    console.log(error)
+  }
+  return success
+}
+
 module.exports = blogFunctions
