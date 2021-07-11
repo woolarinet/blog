@@ -1,5 +1,5 @@
-const query = require('../../../../config/graphql')
-const blogFunctions = require('../blogFunction')
+const query = require('../../../config/graphql')
+const blogFunctions = require('./blogFunction')
 
 export default async (req, res) => {
   const cate = await blogFunctions.getEntries(query.category)
