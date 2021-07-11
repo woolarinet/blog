@@ -6,7 +6,7 @@ import ReactHtmlParser from 'react-html-parser'
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-const BlogLayout = ({ children, cate, cnt }) => {
+const BlogLayout = ({ children, cate }) => {
   const [showLinks, setShowLinks] = useState(false)
   return (
     <>
@@ -35,14 +35,14 @@ const BlogLayout = ({ children, cate, cnt }) => {
               <div className={styles.category}>
                 <div>
                   <Link href="/blog">
-                    <a>전체 보기 ({cnt})</a>
+                    <a>전체 보기</a>
                   </Link>
                 </div>
                 <br />
                 <div className={styles.subCategory}>
                   {cate.map((lst) => (
-                    <div key={lst.id}>
-                      <Link href="/">
+                    <div key={lst.name}>
+                      <Link href={`/blog/${lst.name}`}>
                         <a>{lst.name}</a>
                       </Link>
                     </div>
@@ -54,25 +54,6 @@ const BlogLayout = ({ children, cate, cnt }) => {
             <article>
               {children}
             </article>
-            <div id={showLinks ? "hiddenCate" : "mobileCate"}>
-              <div className={styles.category}>
-                <div>
-                  <Link href="/blog">
-                    <a>전체 보기 ({cnt})</a>
-                  </Link>
-                </div>
-                <br />
-                <div className={styles.subCategory}>
-                  {cate.map((lst) => (
-                    <div key={lst.id}>
-                      <Link href="/">
-                        <a>{lst.name}</a>
-                      </Link>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </div>

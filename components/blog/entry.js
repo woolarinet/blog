@@ -8,17 +8,19 @@ const BlogEntry = (props) => {
     <>
       <div className={styles.postBox}>
         {/* Post Card */}
-        {props.blogs.map((lst) => (
-          <div className={styles.postInfo} key={lst.id}>
+        {props.posts.map((lst) => (
+          <div className={styles.postInfo} key={props.posts.indexOf(lst)}>
             {/* Image */}
             <div className={styles.postImg}>
-              <Image src={lst.thumb} width={200} height={200} />
+              <Link href={`/blog/${lst.category}/${lst.name}`}>
+                <Image src={`/images/${lst.thumb}.png`} width={200} height={200} />
+              </Link>
             </div>
             <br />
             {/* Title */}
             <div className={styles.postTitle}>
               <div>
-                <Link href={`/blog/${lst.id}`}>
+                <Link href={`/blog/${lst.category}/${lst.name}`}>
                   {lst.title}
                 </Link>
               </div>
