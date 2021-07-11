@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
 import axios from 'axios'
 import styles from '../../styles/Post.module.css'
+// graphql 변경
 
 const BlogDetail = (props) => {
   console.log('----------------------------------')
