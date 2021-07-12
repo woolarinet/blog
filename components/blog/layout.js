@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 const BlogLayout = ({ children, cate }) => {
-  const [showLinks, setShowLinks] = useState(false)
+  // const [showLinks, setShowLinks] = useState(false)
   return (
     <>
       <div className={styles.blogContainer}>
@@ -64,7 +64,6 @@ const BlogLayout = ({ children, cate }) => {
 BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
   cate: PropTypes.array,
-  cnt: PropTypes.number.isRequired,
 }
 
 export default BlogLayout

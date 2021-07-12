@@ -9,15 +9,6 @@ const BlogDetail = (props) => {
   console.log('----------------------------------')
   const content = props.detail.content.replace(/\n/gi, '  \n')
 
-  const submitPost = async () => {
-    await axios
-      .post(`http://localhost:3000/api/blog/delete?id=${props.detail.id}`, {})
-      .then(() => {
-        alert('삭제가 완료되었습니다.')
-        location.replace('/blog')
-      })
-  }
-
   const Heading1 = ({ node, ...props }) => (
     <h1
       style={{
@@ -76,21 +67,6 @@ const BlogDetail = (props) => {
               children={content}
             />
           </div>
-          <div
-            style={{
-              float: 'right',
-              border: '1px solid',
-            }}
-          >
-            <button className={styles.submit} onClick={submitPost}>
-              삭제
-            </button>
-            <Link href={`/blog/update/${props.detail.id}`}>수정하기</Link>
-          </div>
-        </section>
-        {/* Comment */}
-        <section className={styles.comment}>
-          <div />
         </section>
       </div>
     </>

@@ -26,3 +26,11 @@
 .contentDetail {
   font-family: 'Nanum Gothic', sans-serif;
 }
+
+.comment {
+  margin-left: 10px;
+  height: 50px;
+  color: #9080a6;
+  border-bottom: 0.3px solid #9080a6;
+  font-weight: 400;
+}
