@@ -20,10 +20,10 @@ const Header = ({}) => {
               /></a></Link>
             </div>
             <ul id={showLinks ? "hidden" : ""} className="menu">
-              <li className="menu-item"><Link href="/about"><a>소개</a></Link></li>
-              <li className="menu-item"><Link href="/project"><a>프로젝트</a></Link></li>
-              <li className="menu-item"><Link href="/blog"><a>블로그</a></Link></li>
-              <li className="menu-item"><Link href="https://github.com/woolarinet"><a>깃허브</a></Link></li>
+              <li className="menu-item"><Link href="/about"><a>About</a></Link></li>
+              <li className="menu-item"><Link href="/project"><a>Projects</a></Link></li>
+              <li className="menu-item"><Link href="/blog"><a>Blog</a></Link></li>
+              <li className="menu-item"><Link href="https://github.com/woolarinet"><a>GitHub</a></Link></li>
             </ul>
           </div>
           

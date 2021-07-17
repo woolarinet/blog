@@ -47,6 +47,7 @@ a {
   /* float: left; */
   /* border: 1px solid; */
   font-family: 'Nanum Gothic', sans-serif;
+  color: #9080a6;
   display: flex;
   list-style: none;
 }

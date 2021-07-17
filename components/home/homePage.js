@@ -1,5 +1,5 @@
 import styles from '../../styles/Home.module.css'
-import Image from "next/image";
+import Image from "next/image"
 import homeText from '../../public/texts/home'
 import ReactHtmlParser from 'react-html-parser'
 
@@ -46,29 +46,6 @@ const HomePage = ({}) => {
             </li>
           </ul>
         ))}
-      </section>
-
-      {/* 개인프로젝트 */}
-      <section className={styles.pjContainer}>
-        <div className={styles.myProject}>
-          <a href="/project">
-            <h3>개인 프로젝트</h3>
-            {ReactHtmlParser(homeText.myProject)}
-          </a>
-        </div>
-      </section>
-      
-      {/* 블로그 */}
-      <section className={styles.blogContainer}>
-        <div className={styles.blog}>
-          <div>Blog</div>
-        </div>
-        <div className={styles.explain}>
-          {ReactHtmlParser(homeText.myBlog)}
-        </div>
-        {/* 캐러샐로 내용 가져오기 */}
-        <br/>
-        <div>캐러셀</div>
       </section>
     </div>
   )

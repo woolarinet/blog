@@ -25,7 +25,7 @@ const Comments = () => {
   return (
     <div>
       <h1 className={styles.comment}>Comment</h1>
-      <div ref={commentRef} />
+      <div className={styles.commentContent} ref={commentRef} />
     </div>
   )
 }

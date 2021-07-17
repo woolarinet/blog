@@ -1,6 +1,5 @@
 const axios = require('axios')
 const graphql = require('../../../config/graphql')
-const db = require('../../../config/db')
 
 const blogFunctions = {}
 

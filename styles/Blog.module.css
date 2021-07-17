@@ -8,7 +8,7 @@
 .header {
   min-height: 180px;
   color: #9080a6;
-  border-bottom: 0.1px solid #e0d4f3;
+  /* border-bottom: 11px solid #e0d4f3; */
 }
 
 .headerDesc {
@@ -32,17 +32,17 @@
 }
 
 .listLayout {
+  font-family: 'Nanum Gothic', sans-serif;
   margin: 0 auto;
-  /* max-width: 1000px; */
+  border-radius: 10px;
   display: flex;
   flex-wrap: nowrap;
-  gap: 1em;
-  /* border: 1px solid; */
+  /* gap: 1em; */
+  box-shadow: 0 0 0 11px #e0d4f3;
 }
 
 .listLayout aside {
   flex-basis: 200px;
-  /* min-height: 800px; */
   flex-grow: 0;
   flex-shrink: 0;
   background-color: #e0d4f3;
@@ -64,8 +64,14 @@
 
 .listLayout article {
   flex-basis: 700px;
+  /* border: 1px solid; */
   flex-grow: 1;
   flex-shrink: 1;
+  box-shadow: 0 0 0 11px #e0d4f3;
+  border-radius: 10px;
+  /* border: 1px solid; */
+  /* border: 5px solid #e0d4f3; */
+  /* border-radius: 3px; */
   /* background-color: #ffe0e0; */
 }
 
@@ -88,12 +94,13 @@
   border-radius: 2%;
   text-align: center;
   /* border: 1px solid blue; */
-  background-color: white;
+  /* background-color: white; */
 }
 
 .postImg {
   border-bottom: 0.5px solid lightgray;
   padding: 20px;
+  cursor: pointer;
 }
 
 .postTitle {
