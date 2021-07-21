@@ -43,4 +43,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] insert into _app.js components (header, footer)
 - [x] change CKEditor to Toast
 - [x] comment
-- [ ] category mobile version
+- [x] category mobile version
