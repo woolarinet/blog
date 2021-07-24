@@ -17,20 +17,20 @@ const Footer = ({}) => {
                   <Image
                     src="/images/mail.png"
                     alt="mail"
-                    width={20}
+                    width={25}
                     height={20}
                   />
                 </a>
               </Link>
             </li>
-            <li className="kakao">
+            <li className="linkedin">
               <Link href="/">
                 <a>
                   <Image
-                    src="/images/kakao.png"
-                    alt="kakao"
-                    width={20}
-                    height={20}
+                    src="/images/linkedin.png"
+                    alt="linkedin"
+                    width={25}
+                    height={25}
                   />
                 </a>
               </Link>
@@ -39,10 +39,10 @@ const Footer = ({}) => {
               <Link href="/">
                 <a>
                   <Image
-                    src="/images/git.png"
+                    src="/images/github2.png"
                     alt="github"
-                    width={20}
-                    height={20}
+                    width={25}
+                    height={25}
                   />
                 </a>
               </Link>

@@ -63,7 +63,7 @@
 }
 
 .listLayout article {
-  flex-basis: 700px;
+  /* flex-basis: 700px; */
   /* border: 1px solid; */
   flex-grow: 1;
   flex-shrink: 1;

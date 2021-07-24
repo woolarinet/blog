@@ -76,7 +76,7 @@ a {
 }
 
 .footerContainer {
-  background-color: #333333;
+  background: linear-gradient(to left, white, #f3c8cf);
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -85,7 +85,7 @@ a {
 }
 
 .footerContents {
-  color: lightgray;
+  color: #3c3940;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -96,7 +96,7 @@ a {
 .footerContents p {
   display: inline;
   margin: 0 30px;
-  color: lightslategrey;
+  color: #3c3940;
 }
 
 .footerContents ul {
@@ -116,7 +116,7 @@ a {
 } */
 
 .info {
-  color: #b2bbc3;
+  color: #3c3940;
   line-height: 18px;
   font-weight: 300;
   letter-spacing: -.5px;

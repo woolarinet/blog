@@ -9,19 +9,24 @@ const HomePage = ({}) => {
       {/* 이미지 + 메세지 */}
       <section className={styles.visualContainer}>
         <div className={styles.visual}>
-          <div className={styles.mainImg}>
-            <div className={styles.codeAni}>
-              <Image src="/images/tag.png" width={80} height={50.78} />
+          <div className={styles.introImg}>
+            <div className={styles.favicon}>
+              <Image src="/favicon.png" width={80} height={80} />
             </div>
-            <div className={styles.humanImg}>
-              <Image src="/images/human.png" width={399} height={287}/>
+            <div className={styles.sunhodev}>
+              <Image src="/sunhodev.png" width={600} height={50}/>
             </div>
           </div>
-          <div className={styles.typing}>
-            안녕하세요,
-          </div>
-          <div className={styles.typingAni}>
-            {ReactHtmlParser(homeText.myself)}
+          <br /><br />
+          <div className={styles.introBox}>
+            <div className={styles.typingAni}>
+              <div>
+                <Image src="/ohaor.png" width={400} height={30}/>
+              </div>
+              <div>
+                {ReactHtmlParser(homeText.myself)}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -29,21 +34,22 @@ const HomePage = ({}) => {
       {/* 기술스택 */}
       <section className={styles.skillContainer}>
         <div className={styles.skills}>
-          <div>Skills</div>
-        </div>
-        <div className={styles.explain}>
-          {ReactHtmlParser(homeText.explain)}
+          <Image src="/skills.png" width={100} height={20}/>
         </div>
         {/*이미지 + 설명 */}
         {homeText.skills.infos.map((lst) => (
-          <ul className={styles.skillsImg} key={lst.name}>
-            <li>
-              <div>
-                <Image src={lst.img} width={80} height={80} />
-                <h3>{lst.name}</h3>
+          <ul className={styles.skillsContent} key={lst.name}>
+            <div className={styles.skillsType}>
+              {lst.name}
+            </div>
+            {lst.content.map((el) => (
+              <div className={styles.skillsStack}>
+                <li>
+                  <Image src={el.img} width={50} height={50} />
+                  &nbsp;&nbsp;<div>{el.name}</div>
+                </li>
               </div>
-              <p>{ReactHtmlParser(lst.content)}</p>
-            </li>
+            ))}
           </ul>
         ))}
       </section>
