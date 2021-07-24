@@ -1,19 +1,17 @@
 import React from 'react';  
-import AboutTitle from '../components/about/title';
-import Brand from '../components/about/brand';
+import Experience from '../components/about/experience';
 import Introduce from '../components/about/introduce';
-import Keyword from '../components/about/keyword';
-import Skills from '../components/about/skills';
+import Keyword from '../components/about/keyword'
+import Education from '../components/about/education';
 
 
 const about = () => {
     return (
       <>
-        <AboutTitle></AboutTitle>
-        <Keyword></Keyword>
         <Introduce></Introduce>
-        <Skills></Skills>
-        <Brand></Brand>
+        <Education></Education>
+        <Experience></Experience>
+        <Keyword></Keyword>
       </>
     )
 }

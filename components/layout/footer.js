@@ -12,10 +12,10 @@ const Footer = ({}) => {
           {/* 링크 */}
           <ul className="footerLinks">
             <li className="mail">
-              <Link href="/">
+              <Link href="mailto:zerozzung@gmail.com">
                 <a>
                   <Image
-                    src="/images/mail.png"
+                    src="/images/gmail.png"
                     alt="mail"
                     width={25}
                     height={20}
@@ -23,24 +23,24 @@ const Footer = ({}) => {
                 </a>
               </Link>
             </li>
-            <li className="linkedin">
-              <Link href="/">
+            <li className="sns">
+              <Link href="https://www.github.com/woolarinet">
                 <a>
                   <Image
-                    src="/images/linkedin.png"
-                    alt="linkedin"
+                    src="/images/github2.png"
+                    alt="github"
                     width={25}
                     height={25}
                   />
                 </a>
               </Link>
             </li>
-            <li className="sns">
-              <Link href="/">
+            <li className="linkedin">
+              <Link href="https://www.linkedin.com/in/sunhojw">
                 <a>
                   <Image
-                    src="/images/github2.png"
-                    alt="github"
+                    src="/images/linkedin.png"
+                    alt="linkedin"
                     width={25}
                     height={25}
                   />
@@ -56,10 +56,10 @@ const Footer = ({}) => {
             <p>|</p> 
             <p> 이메일 </p> 
             <p> {footerText.email} </p>
-            <p>|</p> 
-            <p>카카오톡 {footerText.kakao} </p>
-            <p>|</p> 
+            <p>|</p>
             <p> 깃허브 {footerText.github} </p>
+            <p>|</p>
+            <p> 링트인 {footerText.linkedIn} </p>
           </span>
           <div>Copyright ⓒ 2021 sunho All Rights Reserved.</div>
         </div>

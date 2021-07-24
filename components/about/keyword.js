@@ -8,18 +8,17 @@ const Keyword = ({}) => {
       <>
         <div className={styles.container}>
             {/* KEYWORD */}
-            <section className={styles.keywords}>
+            <section className={styles.aboutSection}>
                 <div>
-                  <ul>
-                    {aboutText.keywords.map((lst) => (
-                      <li key={lst.content}>
-                        <div className={styles.kwimages}>
-                          <Image src={lst.img} width={64} height={64} />
-                        </div>
-                        {ReactHtmlParser(lst.content)}
-                      </li>
-                    ))}
-                  </ul>
+                  <h1>What is sunhodev?</h1>
+                  <div>
+                    <div className={styles.keywordDesc}>
+                      {ReactHtmlParser(aboutText.brand)}
+                    </div>
+                    <div className={styles.keywordImg}>
+                      <Image src="/images/about/keywordlogo.png" width={200} height={200} />
+                    </div>
+                  </div>
                 </div>
             </section>
         </div>

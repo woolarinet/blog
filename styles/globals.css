@@ -76,7 +76,7 @@ a {
 }
 
 .footerContainer {
-  background: linear-gradient(to left, white, #f3c8cf);
+  background: linear-gradient(to left, white, rgb(245, 236, 186));
   width: 100%;
   margin: 0 auto;
   position: relative;
