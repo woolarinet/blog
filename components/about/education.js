@@ -14,7 +14,7 @@ const Education = ({}) => {
             <div>
               <h1>Education</h1>
               {aboutText.education.map((el) => (
-                <div className={styles.card}>
+                <div className={styles.card} key={el.name}>
                   <li>
                     <span className={styles.thumb}>
                       <Image src={el.img} width={100} height={100} />

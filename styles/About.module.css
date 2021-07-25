@@ -1,3 +1,8 @@
+/* for header */
+.forHeader {
+    margin-top: 60px;
+}
+
 /* COMMON */
 #section_line {
     border-bottom: 1px solid #ebebeb;
@@ -16,6 +21,7 @@
     display: inline-block;
     border-bottom: 10px solid #9080a6;
 }
+
 
 /* Education & WorkExperience - Common Card */
 

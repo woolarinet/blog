@@ -33,16 +33,15 @@ const BlogLayout = ({ children, cate }) => {
         </main>
         <div
           id={styles.dropBtn}
-          className="material-icons"
           onClick={() => setShowBtn(!showBtn)}
         >
-          expand_more
+          category (click !)
         </div>
 
         <div id={showBtn ? 'hide' : ''} className={styles.toggle__cate}>
           {cate.map((lst) => (
             <div key={lst.name}>
-              <Link href="/">
+              <Link href={`/blog/${lst.name}`}>
                 <a>{lst.name}</a>
               </Link>
             </div>

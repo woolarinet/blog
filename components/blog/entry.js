@@ -13,7 +13,9 @@ const BlogEntry = (props) => {
             {/* Image */}
             <div className={styles.postImg}>
               <Link href={`/blog/${lst.category}/${lst.name}`}>
-                <Image src={`/images/${lst.thumb}.png`} width={200} height={200} />
+                <a>
+                  <Image src={`/images/blog/${lst.thumb}.png`} width={200} height={200} />
+                </a>
               </Link>
             </div>
             <br />
@@ -21,7 +23,7 @@ const BlogEntry = (props) => {
             <div className={styles.postTitle}>
               <div>
                 <Link href={`/blog/${lst.category}/${lst.name}`}>
-                  {lst.title}
+                  <a>{lst.title}</a>
                 </Link>
               </div>
             </div>

@@ -5,7 +5,9 @@ module.exports = {
   images: {
     domains: [
       'pkk-blog.s3.ap-northeast-2.amazonaws.com',
-      'localhost:3000'
+      'localhost:3000',
+      'sunhodev.com'
     ]
-  }
+  },
+  poweredByHeader: false,
 }

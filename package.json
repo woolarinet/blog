@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "vercel-deploy": "next build && next export"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^27.1.0",

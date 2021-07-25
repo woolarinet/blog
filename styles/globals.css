@@ -184,6 +184,10 @@ a {
     margin-bottom: 1px;
     z-index: 2;
   }
+  #hide {
+    /* border: 5px solid green; */
+    display: flex;
+  }
   .menu-item {
     background-color: #fff;
     width: 100vw;

@@ -10,7 +10,7 @@ const Introduce = ({}) => {
         <div className={styles.container}>
           {/* INTRODUCE */}
           <section className={styles.aboutSection}>
-            <div>
+            <div className={styles.forHeader}>
               <h1>About Me</h1>
               {ReactHtmlParser(aboutText.introduce)}
             </div>

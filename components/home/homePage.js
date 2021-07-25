@@ -43,7 +43,7 @@ const HomePage = ({}) => {
               {lst.name}
             </div>
             {lst.content.map((el) => (
-              <div className={styles.skillsStack}>
+              <div className={styles.skillsStack} key={el.name}>
                 <li>
                   <Image src={el.img} width={50} height={50} />
                   &nbsp;&nbsp;<div>{el.name}</div>
