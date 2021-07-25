@@ -19,7 +19,7 @@ const Header = ({}) => {
                     height={50}
               /></a></Link>
             </div>
-            <ul id={showLinks ? "hidden" : ""} className="menu">
+            <ul id={showLinks ? "hidden" : ""} className="menu" onClick={() => setShowLinks(!showLinks)}>
               <li className="menu-item"><Link href="/about"><a>About</a></Link></li>
               <li className="menu-item"><Link href="/project"><a>Projects</a></Link></li>
               <li className="menu-item"><Link href="/blog"><a>Blog</a></Link></li>

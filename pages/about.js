@@ -1,8 +1,9 @@
 import React from 'react';  
-import Experience from '../components/about/experience';
-import Introduce from '../components/about/introduce';
+import Experience from '../components/about/experience'
+import Introduce from '../components/about/introduce'
 import Keyword from '../components/about/keyword'
-import Education from '../components/about/education';
+import Education from '../components/about/education'
+import Head from 'next/head'
 
 
 const about = () => {

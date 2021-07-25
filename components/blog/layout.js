@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 const BlogLayout = ({ children, cate }) => {
-  const [showBtn, setShowBtn] = useState(true)
+  const [showBtn, setShowBtn] = useState(false)
   return (
     <>
       <div className={styles.blogContainer}>

@@ -177,12 +177,11 @@ a {
     flex-direction: column;
   }
   #hidden {
-    position: absolute;
-    /* border: 3px solid green; */
+    /* position: absolute;
     box-sizing: border-box;
     border-top: 1px solid lightgray;
     margin-bottom: 1px;
-    z-index: 2;
+    z-index: 2; */
   }
   #hide {
     /* border: 5px solid green; */
