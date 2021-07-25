@@ -225,15 +225,15 @@ a {
   .info p:nth-child(3) {
     display: none;
   }
-  .info p:nth-child(5) {
+  /* .info p:nth-child(5) {
     display: none;
-  }
-  .info p:nth-child(6) {
+  } */
+  /* .info p:nth-child(9) {
     display: none;
-  }
-  .info p:nth-child(7) {
+  } */
+  /* .info p:nth-child(7) {
     display: none;
-  }
+  } */
 }
 
 .utterances {

@@ -54,12 +54,14 @@ const Footer = ({}) => {
           <span>
             <p>{footerText.name} </p>
             <p>|</p> 
-            <p> 이메일 </p> 
+            <p> mail: </p> 
             <p> {footerText.email} </p>
             <p>|</p>
-            <p> 깃허브 {footerText.github} </p>
+            <p> github - </p>
+            <p> {footerText.github} </p>
             <p>|</p>
-            <p> 링트인 {footerText.linkedIn} </p>
+            <p> linkedIn - </p>
+            <p> {footerText.linkedIn} </p>
           </span>
           <div>Copyright ⓒ 2021 sunho All Rights Reserved.</div>
         </div>

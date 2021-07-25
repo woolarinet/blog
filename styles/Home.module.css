@@ -132,4 +132,10 @@
     font-size: 14px;
     /* border: 1px solid; */
   }
+  .typingAni {
+    font-size: 14px;
+  }
+  .skillsStack img {
+    width: 30px;
+  }
 }
