@@ -1,8 +1,9 @@
 .blogContainer {
-  width: 100%;
-  /* min-height: 800px; */
-  background-color: rgb(248, 239, 239);
-  padding: 25px;
+  width: 1200px;
+  margin: 0 auto;
+  color: #3c3940;
+  padding: 10px;
+  /* background-color: rgb(248, 239, 239); */
 }
 
 .header {
@@ -15,12 +16,10 @@
   font-size: 25px;
   font-weight: 340;
   color: grey;
-  /* border: 1px solid black; */
   display: inline-block;
 }
 
 .headerInfo {
-  /* border: 1px solid; */
   margin-right: 20px;
   float: right;
 }
@@ -38,19 +37,19 @@
   display: flex;
   flex-wrap: nowrap;
   /* gap: 1em; */
-  box-shadow: 0 0 0 11px #e0d4f3;
+  box-shadow: 0 0 0 11px #9080a6;
 }
 
 .listLayout aside {
   flex-basis: 200px;
   flex-grow: 0;
   flex-shrink: 0;
-  background-color: #e0d4f3;
+  background-color: #9080a6;
 }
 
 .category {
   padding: 20px;
-  color: #816670;
+  color: #f3dce7;
 }
 
 .category a:hover {
@@ -63,16 +62,9 @@
 }
 
 .listLayout article {
-  /* flex-basis: 700px; */
-  /* border: 1px solid; */
-  flex-grow: 1;
-  flex-shrink: 1;
-  box-shadow: 0 0 0 11px #e0d4f3;
+  box-shadow: 0 0 0 11px #9080a6;
   border-radius: 10px;
-  /* border: 1px solid; */
-  /* border: 5px solid #e0d4f3; */
-  /* border-radius: 3px; */
-  /* background-color: #ffe0e0; */
+  width: 100%;
 }
 
 .postBox {
@@ -80,21 +72,15 @@
   flex-wrap: wrap;
   gap: 1em;
   padding: 10px;
-  /* background-color: white; */
-  /* border: 1px solid red; */
 }
 
 .postInfo {
-  min-height: 300px;
-  min-width: 400px;
   flex-basis: 300px;
   flex-shrink: 1;
   flex-grow: 1;
   border: 0.5px solid lightgray;
   border-radius: 2%;
   text-align: center;
-  /* border: 1px solid blue; */
-  /* background-color: white; */
 }
 
 .postImg {
@@ -107,6 +93,7 @@
   font-size: 1.3rem;
   height: 80px;
   color:#9080a6;
+  font-weight: 800;
   /* border: 1px solid; */
 }
 
@@ -153,6 +140,37 @@
   display: block;
 }
 
+.toggle__cate {
+  /* position: fixed; */
+  display: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.toggle__cate > div {
+  border-top: 1px solid lightgray;
+}
+.toggle__cate > div:first-child {
+  border-top: none;
+}
+.toggle__cate > div:hover {
+  /* border: 3px solid red; */
+  background-color: blueviolet;
+}
+
+#dropBtn {
+  display: none;
+  position: fixed;
+  top: 14px;
+  right: 435px;
+  background-color: #333;
+  color: #f0f0f0;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
 #mobileCate {
   display: none;
 }
@@ -160,5 +178,110 @@
 @media (max-width: 999px) {
   .listLayout aside {
     display: none;
+  }
+  .toggle__cate {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+    border: 1px solid #333;
+    width: 30%;
+    top: 58px;
+    right: 370px;
+  }
+  #dropBtn {
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 600px) {
+  .blogContainer {
+    width: 100%;
+    padding: 10px;
+  }
+  .headerDesc {
+    font-size: 15px;
+  }
+  .listLayout {
+    display: block;
+    width: 100%;
+    gap: 1em;
+  }
+  .listLayout .category {
+    display: none;
+  }
+  .postBox {
+    gap: 1;
+    padding: 10px;
+  }
+  .postInfo {
+    flex-basis: 300px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    border: 0.5px solid lightgray;
+    border-radius: 2%;
+    text-align: center;
+  }
+  .postDate {
+    float: none;
+    padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .blogContainer {
+    width: 100%;
+    padding: 10px;
+  }
+  .headerDesc {
+    font-size: 15px;
+  }
+  .listLayout {
+    display: block;
+    width: 100%;
+    gap: 1em;
+  }
+  .listLayout .category {
+    display: none;
+  }
+  .listLayout article {
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .postBox {
+    display: block;
+    gap: 1;
+    padding: 10px;
+  }
+  .postInfo {
+    min-height: 0;
+    min-width: 0;
+    flex-grow: 0;
+    border: 0.5px solid lightgray;
+    border-radius: 2%;
+    text-align: center;
+  }
+  .postDate {
+    float: none;
+    padding: 0;
+  }
+  .toggle__cate {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+    border: 1px solid #333;
+    width: 40%;
+    top: 58px;
+    right: 170px;
+  }
+  #dropBtn {
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    right: 200px;
   }
 }

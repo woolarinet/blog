@@ -19,49 +19,6 @@ const BlogDetail = (props) => {
       )
     }
   }
-
-  const Heading1 = ({ node, ...props }) => (
-    <h1
-      style={{
-        borderBottom: '4px double',
-        paddingBottom: '1rem',
-      }}
-      {...props}
-    />
-  )
-  const CodeBlock = ({ node, ...props }) => (
-    <code
-      style={{
-        backgroundColor: '#e5eaee',
-        // padding: '2rem',
-        // lineHeight: '1.5rem',
-        // margin: '2rem auto',
-      }}
-      {...props}
-    />
-  )
-  const BlockQuoteStyle = ({ node, ...props }) => (
-    <div
-      style={{
-        padding: '1rem',
-        border: '1px dashed black',
-      }}
-      {...props}
-    />
-  )
-  const imageStyle = ({ node, ...props }) => (
-    <img
-      style={{
-        maxWidth: '100%',
-      }}
-      {...props}
-    />
-  )
-  const LinkStyle = ({ node, ...props }) => (
-    props.href.match(/^(http?)?\/\//)
-      ? <a href={props.href}>{props.children}</a>
-      : <Link to={props.href}>{props.children}</Link>
-  )
   return (
     <>
       <div className={styles.container}>

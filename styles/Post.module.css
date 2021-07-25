@@ -2,9 +2,10 @@
 
 .container {
   padding: 10px 30px;
-  background-color: rgb(248, 239, 239);
+  background-color: rgb(243, 243, 231);
   border-radius: 10px;
   line-height: 30px;
+  width: 100%;
   /* border: 11px solid #e0d4f3; */
   /* min-height: 800px; */
 }
@@ -31,15 +32,10 @@
 }
 
 .contentDetail h1 {
-  /* line-height: 10px; */
-  /* text-decoration-line: underline; */
   display: inline-block;
-  /* box-shadow: 0 0 0 5px #9080a6; */
-  /* border-radius: 10px; */
   border-bottom: 10px solid #9080a6;
   padding-bottom: 0;
   margin-bottom: 10px;
-  /* color: #9080a6; */
 }
 .contentDetail h2 {
   border-bottom: 7px solid #e0d4f3;
@@ -47,6 +43,17 @@
 }
 .contentDetail img {
   max-width: 100%;
+}
+.contentDetail blockquote {
+  width: 100%;
+  margin-left: -30px;
+  margin: 0 auto;
+}
+.contentDetail blockquote li {
+  width: 95%;
+}
+.contentDetail blockquote li a {
+  width: 90%;
 }
 
 .comment {
@@ -61,4 +68,14 @@
 .commentContent {
   margin-left: 30px;
   margin-right: 30px;
+}
+
+@media (max-width: 999px) {
+  .contentDetail blockquote {
+    padding: 3px;
+    margin-left: -20px;
+  }
+  .contentDetail blockquote ul li a {
+    width: 75%;
+  }
 }

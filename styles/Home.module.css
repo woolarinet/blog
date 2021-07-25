@@ -4,7 +4,7 @@
   flex-direction: column;
   background: linear-gradient(to right, white, #e9e2f3);
   background-attachment: fixed;
-  height: 600px;
+  height: 700px;
 }
 
 .visual {
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  height: 150px;
+  height: 250px;
 }
 
 .favicon {
@@ -27,6 +27,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-delay: 0.3s;
+  margin-top: 100px;
   position: absolute;
 }
 

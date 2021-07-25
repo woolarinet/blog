@@ -7,10 +7,14 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 const BlogLayout = ({ children, cate }) => {
-  // const [showLinks, setShowLinks] = useState(false)
+  const [showBtn, setShowBtn] = useState(true)
   return (
     <>
       <div className={styles.blogContainer}>
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
         {/* Header */}
         <main className={styles.header}>
           <div>
@@ -27,6 +31,23 @@ const BlogLayout = ({ children, cate }) => {
             </div>
           </div>
         </main>
+        <div
+          id={styles.dropBtn}
+          className="material-icons"
+          onClick={() => setShowBtn(!showBtn)}
+        >
+          expand_more
+        </div>
+
+        <div id={showBtn ? 'hide' : ''} className={styles.toggle__cate}>
+          {cate.map((lst) => (
+            <div key={lst.name}>
+              <Link href="/">
+                <a>{lst.name}</a>
+              </Link>
+            </div>
+          ))}
+        </div>
         {/* Body */}
         <section>
           <div className={styles.listLayout}>

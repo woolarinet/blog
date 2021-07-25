@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 - [ ] ssr problem
 - [x] api sync
-- [ ] layout of dynamic pages (blog, project)
+- [x] layout of dynamic pages (blog, project)
 - [x] component page props
 - [x] make all pages consist of only components
 - [x] insert into _app.js components (header, footer)

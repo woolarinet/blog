@@ -4,7 +4,7 @@ import React from 'react';
 import aboutText from '../../public/texts/about'
 import ReactHtmlParser from 'react-html-parser'
 
-const Skills = ({}) => {
+const Education = ({}) => {
 
     return (
       <>
@@ -37,4 +37,4 @@ const Skills = ({}) => {
     );
   };
 
-export default Skills;
+export default Education;
