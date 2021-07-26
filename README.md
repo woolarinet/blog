@@ -1,13 +1,10 @@
 # sunhodev
+- [sunhodev.com](https://www.sunhodev.com)  
+
 This is my blog website. (*This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)* )
-
-- [sunhodev.com](https://www.sunhodev.com)
-
-- [junghwayang.com](https://junghwayang.com/) - I totally referred to her blog. Everything in her blog seems to be highly perfected👍
 
 ## Environment
 
-  &nbsp;
 ### Development Environment
 - Visual Studio Code
 - Mac OS Catalina
@@ -93,6 +90,8 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+
+  &nbsp;  
 To use GraphQL API in github, take a look at the following resources:
 
 - [github GraphQL API Docs](https://docs.github.com/en/graphql)
@@ -115,3 +114,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] comment
 - [x] category mobile version
 - [ ] meta & SEO
+
+## Reference
+
+- [junghwayang.com](https://junghwayang.com/) - I totally referred to her blog. Everything in her blog seems to be highly perfected👍
