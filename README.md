@@ -91,6 +91,12 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+To use GraphQL API in github, take a look at the following resources:
+
+- [github GraphQL API Docs](https://docs.github.com/en/graphql)
+
+- [junghwayang.com](https://junghwayang.com/) - I totally referred to her blog. Everything in her blog seems to be highly perfected👍
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
