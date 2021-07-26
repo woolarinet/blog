@@ -3,6 +3,8 @@ This is my blog website. (*This is a [Next.js](https://nextjs.org/) project boot
 
 - [sunhodev.com](https://www.sunhodev.com)
 
+- [junghwayang.com](https://junghwayang.com/) - I totally referred to her blog. Everything in her blog seems to be highly perfected👍
+
 ## Environment
 
   &nbsp;
@@ -51,17 +53,17 @@ query.post = function (location, name) {
 module.exports = query
 ```
 ### texts
-
+```sh
 ├─public
-│  │ ...
+│  │ # ...
 │  ├─texts
 │  │      about.js
 │  │      blog.js
 │  │      footer.js
 │  │      home.js
 │  │      project.js
-│  │ ...
-
+│  │ # ...
+```
 ##### you can write on these files informations of your contents and import these in each page.
 
 ## Getting Started
@@ -94,8 +96,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 To use GraphQL API in github, take a look at the following resources:
 
 - [github GraphQL API Docs](https://docs.github.com/en/graphql)
-
-- [junghwayang.com](https://junghwayang.com/) - I totally referred to her blog. Everything in her blog seems to be highly perfected👍
 
 ## Deploy on Vercel
 
