@@ -1,0 +1,92 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.sectionTitle {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionTitle span {
+  border-bottom: 11px solid #9080a6;
+}
+
+.projectSection {
+  margin-top: 50px;
+}
+
+.eachProject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectInfo {
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
+.projectInfo h1 {
+  font-size: 40px;
+  color: #9080a6;
+  margin-bottom: 0px;
+}
+
+.projectInfo h4 {
+  color: grey;
+  display: block;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.projectInfo p {
+  font-size: 1.1rem;
+  color: #3c3940;
+  line-height: 2rem;
+  width: 400px;
+}
+
+.toLink span {
+  background-color: #9080a6;
+  padding: 10px;
+  margin-right: 10px;
+  color: beige;
+  border-radius: 3%;
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  .sectionTitle span img {
+    width: 120px;
+  }
+  .eachProject {
+    /* border: 3px solid green; */
+    display: grid;
+  }
+  .projectInfo h1 {
+    font-size: 30px;
+  }
+  .projectInfo {
+    font-size: 12px;
+  }
+  .projectInfo p {
+    font-size: 14px;
+    width: 100%;
+  }
+}

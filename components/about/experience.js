@@ -1,7 +1,7 @@
 import styles from '../../styles/About.module.css'
-import React from 'react';  
+import React from 'react'
 import aboutText from '../../public/texts/about'
-import Image from "next/image";
+import Image from "next/image"
 
 const Experience = ({}) => {
     return (
