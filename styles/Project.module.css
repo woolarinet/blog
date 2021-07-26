@@ -78,6 +78,8 @@
   .eachProject {
     /* border: 3px solid green; */
     display: grid;
+    place-items: center;
+    /* text-align: center; */
   }
   .projectInfo h1 {
     font-size: 30px;
@@ -88,5 +90,10 @@
   .projectInfo p {
     font-size: 14px;
     width: 100%;
+  }
+}
+@media (max-width: 900px) and (min-width: 450px) {
+  .projectInfo p {
+    width: 400px;
   }
 }
