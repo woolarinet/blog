@@ -1,3 +1,9 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 /* for header */
 .forHeader {
     margin-top: 60px;
@@ -57,9 +63,10 @@
 }
 
 /* media */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
     .container {
         width: 100%;
+        padding: 10px;
     }
     .aboutSection {
         font-size: 14px;
@@ -67,16 +74,5 @@
     .thumb {
         display: none;
         padding: 0;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        text-align: center;
-    }
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }

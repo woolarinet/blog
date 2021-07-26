@@ -1,4 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# sunhodev
+This is my blog website. (*This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)* )
+
+- <sunhodev.com>
+
+## Environment
+
+  &nbsp;
+### Development Environment
+- Visual Studio Code
+- Mac OS Catalina
+
+### Deployment Environment
+- All things (SSL Certifiaction and Server) are used in Vercel
+
+### Frontend
+- React.js (v17.0.2)
+- Next.js (v10.2.0)
+
+### Backend
+- Node.js (v14.15.1)
+
+### Storage
+- A woolarinet/blog_content repository in github. (you can use your own personal repository for contents of blog)
+
+## configuration
+
+### .env
+```
+GITHUB_TOKEN=your_github_access_token
+```
+### graphql.js
+``` javascript
+// /config/grpahql.js
+
+require('dotenv').config()
+const query = {
+  apiUrl: "github graphql api url"
+  token: process.env.GITHUB_TOKEN
+}
+
+query.category = "graphql query for getting names of folder in your blog_content repository"
+
+query.allPost = "graphql query for getting all md files in your blog_content repository"
+
+query.post = function (location, name) {
+  const result = "graphql query for getting specific md file in your blog_content repository using dynamic root at your web application"
+  return result
+}
+
+module.exports = query
+```
+### texts
+
+├─public
+│  │ ...
+│  ├─texts
+│  │      about.js
+│  │      blog.js
+│  │      footer.js
+│  │      home.js
+│  │      project.js
+│  │ ...
+
+##### you can write on these files informations of your contents and import these in each page.
 
 ## Getting Started
 
