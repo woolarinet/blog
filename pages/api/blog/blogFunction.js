@@ -46,7 +46,7 @@ blogFunctions.getAll = async function (query) {
           arr.push(obj)
         }
       }
-      arr.sort((a, b) => new Date(a.date).getTime() > new Date(b.date).getTime() ? 1 : -1)
+      arr.sort((a, b) => new Date(a.date).getTime() < new Date(b.date).getTime() ? 1 : -1)
       success = {
         posts: arr,
         cate: list,
@@ -82,7 +82,7 @@ blogFunctions.getPostInCate = async function (query) {
         obj.thumb = temp[4].split('thumb: ')[1].replace(/[']+/g, '')
         arr.push(obj)
       }
-      arr.sort((a, b) => new Date(a.date).getTime() > new Date(b.date).getTime() ? 1 : -1)
+      arr.sort((a, b) => new Date(a.date).getTime() < new Date(b.date).getTime() ? 1 : -1)
       success = arr
     }
   } catch (err) {
