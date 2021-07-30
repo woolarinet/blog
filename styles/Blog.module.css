@@ -104,6 +104,10 @@
   /* border: 1px solid red; */
 }
 
+.mobileDesc {
+  display: none;
+}
+
 .postTitle div:hover {
   color:#1b1227;
 }
@@ -219,7 +223,7 @@
     gap: 1em;
   }
   .listLayout .category {
-    display: none;
+    /* display: none; */
   }
   .postBox {
     gap: 1;
@@ -263,6 +267,24 @@
     gap: 1;
     padding: 10px;
   }
+  .postImg {
+    float: left;
+    border-bottom: none;
+  }
+  .postImg img {
+    width: 50px;
+  }
+  .postTitle {
+    font-size: 15px;
+    height: auto;
+    /* border: 1px solid; */
+  }
+  .postContent {
+    /* display: none; */
+    font-size: 12px;
+    /* border: 1px solid; */
+    height: auto;
+  }
   .postInfo {
     min-height: 0;
     min-width: 0;
@@ -270,6 +292,9 @@
     border: 0.5px solid lightgray;
     border-radius: 2%;
     text-align: center;
+  }
+  .hideMobile {
+    display: none;
   }
   .postDate {
     float: none;

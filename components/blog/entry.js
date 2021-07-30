@@ -33,7 +33,7 @@ const BlogEntry = (props) => {
                 {lst.desc}
               </p>
             </div>
-            <br />
+            <br className={styles.hideMobile} />
             {/* Date */}
             <div className={styles.postDate}>
               {lst.date}
