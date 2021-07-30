@@ -222,9 +222,6 @@
     width: 100%;
     gap: 1em;
   }
-  .listLayout .category {
-    /* display: none; */
-  }
   .postBox {
     gap: 1;
     padding: 10px;
