@@ -67,6 +67,8 @@ var/
 /public/server.png
 /public
 
+# mocha
+/pages/api/mocha
 exs/
 
 # config

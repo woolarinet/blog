@@ -114,6 +114,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] comment
 - [x] category mobile version
 - [ ] meta & SEO
+- [ ] font-size in mobile display
 
 ## Reference
 
