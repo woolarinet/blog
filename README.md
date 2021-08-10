@@ -114,8 +114,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] comment
 - [x] category mobile version
 - [ ] meta & SEO
-- [ ] creating sitemap & robots.txt
+- [x] creating sitemap & robots.txt
 - [ ] font-size in mobile display
+- [ ] exception control
 
 ## Reference
 
