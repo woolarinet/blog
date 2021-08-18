@@ -55,6 +55,29 @@
 .contentDetail blockquote li a {
   width: 90%;
 }
+.contentDetail tr {
+  border-top: 1px solid #c6cbd1;
+  background: #fff;
+}
+
+.contentDetail th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+.contentDetail td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+/* .contentDetail table tr:nth-child(2n) {
+  background: #f6f8fa;
+} */
+.contentDetail blockquote li {
+  width: 95%;
+}
+.contentDetail blockquote li a {
+  width: 90%;
+}
 
 .comment {
   margin-left: 30px;

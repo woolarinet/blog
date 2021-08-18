@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
+import gfm from 'remark-gfm'
 import styles from '../../styles/Post.module.css'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {tomorrow} from 'react-syntax-highlighter/dist/cjs/styles/prism'
@@ -32,6 +33,7 @@ const BlogDetail = (props) => {
           <div className={styles.contentDetail}>
             <ReactMarkdown
               components={components}
+              plugins={gfm}
               children={content}
             />
           </div>
