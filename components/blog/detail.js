@@ -16,7 +16,7 @@ const BlogDetail = (props) => {
       return !inline && match ? (
         <SyntaxHighlighter style={tomorrow} language={match[1]} PreTag="div" children={String(children).replace(/\n$/, '')} {...props} />
       ) : (
-        <code className={className} {...props} />
+        <code className={className} children={String(children).replace(/\n$/, '')} {...props} />
       )
     }
   }

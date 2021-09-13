@@ -69,6 +69,11 @@
   border: 1px solid #dfe2e5;
 }
 
+.contentDetail code {
+  background-color: rgb(190, 185, 185);
+  color: rgb(247, 133, 3);
+  border-radius: 5%;
+}
 /* .contentDetail table tr:nth-child(2n) {
   background: #f6f8fa;
 } */
