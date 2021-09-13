@@ -17,6 +17,12 @@ a {
   text-decoration: none;
 }
 
+code {
+  background-color: rgb(190, 185, 185);
+  color: rgb(247, 133, 3);
+  border-radius: 5%;
+}
+
 * {
   box-sizing: border-box;
 }
