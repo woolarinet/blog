@@ -9,7 +9,7 @@ const Comments = () => {
     const utterances = document.createElement('script')
     const config = {
       src: "https://utteranc.es/client.js",
-      repo: "woolarinet/blog_content",
+      repo: "woolarinet/blogContent",
       'issue-term': "pathname",
       label: "comments",
       theme: "github-light",

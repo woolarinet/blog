@@ -35,11 +35,12 @@
 .listLayout {
   font-family: 'Nanum Gothic', sans-serif;
   margin: 0 auto;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   display: flex;
   flex-wrap: nowrap;
   /* gap: 1em; */
-  box-shadow: 0 0 0 11px #9080a6;
+  /* box-shadow: 0 0 0 11px #9080a6; */
+  /* border: 5px solid red; */
 }
 
 .listLayout aside {
@@ -64,7 +65,7 @@
 }
 
 .listLayout article {
-  box-shadow: 0 0 0 11px #9080a6;
+  /* /* box-shadow: 0 0 0 11px #9080a6; */
   border-radius: 10px;
   width: 100%;
 }
