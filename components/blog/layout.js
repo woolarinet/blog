@@ -6,7 +6,7 @@ import ReactHtmlParser from 'react-html-parser'
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-const BlogLayout = ({ children, cate }) => {
+const BlogLayout = ({ children, cate, all }) => {
   const [showBtn, setShowBtn] = useState(false)
   return (
     <>
@@ -55,7 +55,7 @@ const BlogLayout = ({ children, cate }) => {
               <div className={styles.category}>
                 <div>
                   <Link href="/blog">
-                    <a>전체 보기</a>
+                    <a>전체 보기 ({all})</a>
                   </Link>
                 </div>
                 <br />
@@ -63,7 +63,7 @@ const BlogLayout = ({ children, cate }) => {
                   {cate.map((lst) => (
                     <div key={lst.name}>
                       <Link href={`/blog/${lst.name}`}>
-                        <a>{lst.name}</a>
+                        <a>{lst.name} ({lst.object.entries.length})</a>
                       </Link>
                     </div>
                   ))}
@@ -84,6 +84,7 @@ const BlogLayout = ({ children, cate }) => {
 BlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
   cate: PropTypes.array,
+  all: PropTypes.array,
 }
 
 export default BlogLayout

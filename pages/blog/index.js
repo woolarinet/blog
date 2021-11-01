@@ -4,7 +4,7 @@ import axios from 'axios'
 import BlogLayout from '../../components/blog/layout'
 import BlogEntry from '../../components/blog/entry'
 
-const Blog = ({ entries, posts }) => {
+const Blog = ({ entries, posts, all }) => {
   return (
     <div>
       <Head>
@@ -24,7 +24,7 @@ const Blog = ({ entries, posts }) => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sunhodev.com/meta-sunhodev.png" />
       </Head>
-      <BlogLayout cate={entries}>
+      <BlogLayout cate={entries} all={all}>
         <BlogEntry posts={posts} />
       </BlogLayout>
     </div>
@@ -38,6 +38,7 @@ Blog.getInitialProps = async () => {
   return {
     entries: data.entries,
     posts: data.posts,
+    all: data.all,
   }
 }
 

@@ -109,18 +109,18 @@
   .title {
     /* border-top: 0.5px solid #9080a6; */
     padding-bottom: 10px;
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .title h2 {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 20px;
     /* border: 1px solid; */
   }
   
   .contentDetail {
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 10px;
+    font-size: 12px;
   }
   
   .contentDetail h1 {
@@ -128,14 +128,14 @@
     border-bottom: 5px solid #9080a6;
     padding-bottom: 0;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 22px;
   }
   
   .contentDetail h3 {
     border-bottom: 3px solid #87bdff;
     padding-bottom: 0;
     display: inline-block;
-    font-size: 15px;
+    font-size: 17px;
   }
   
   .contentDetail h2 {
@@ -152,6 +152,6 @@
     width: 75%;
   }
   .comment {
-    font-size: 20px;
+    font-size: 22px;
   }
 }

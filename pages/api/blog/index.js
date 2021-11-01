@@ -4,7 +4,7 @@ const blogFunctions = require('./blogFunction')
 export default async (req, res) => {
   const result = await blogFunctions.getAll(query.allPost)
   console.log(result.posts.length)
-  console.log(result.cate[2].object)
+  console.log(result.cate[0].object.entries.length)
 
   if (result === false) {
     res.status(400).end('FAIL')
@@ -19,5 +19,6 @@ export default async (req, res) => {
   res.status(200).json({
     entries: result.cate,
     posts: result.posts,
+    all: result.posts.length,
   })
 }

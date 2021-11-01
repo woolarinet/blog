@@ -4,7 +4,7 @@ import axios from 'axios'
 import BlogLayout from '../../../components/blog/layout'
 import BlogEntry from '../../../components/blog/entry'
 
-const Blog = ({ entries, cnt, posts }) => {
+const Blog = ({ entries, all, posts }) => {
   return (
     <div>
       <Head>
@@ -24,7 +24,7 @@ const Blog = ({ entries, cnt, posts }) => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sunhodev.com/meta-sunhodev.png" />
       </Head>
-      <BlogLayout cate={entries}>
+      <BlogLayout cate={entries} all = {all}>
         <BlogEntry posts={posts} />
       </BlogLayout>
     </div>
@@ -33,10 +33,12 @@ const Blog = ({ entries, cnt, posts }) => {
 
 Blog.getInitialProps = async (context) => {
   const response = await axios.get(`http://localhost:3000/api/blog/category?cate=${context.query.cate}`)
+  const forCnt = await axios.get('http://localhost:3000/api/blog')
   const data = response.data
   return {
     entries: data.entries,
     posts: data.posts,
+    all: forCnt.data.all,
   }
 }
 

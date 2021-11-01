@@ -5,7 +5,7 @@ import BlogLayout from '../../../components/blog/layout'
 import BlogDetail from '../../../components/blog/detail'
 import Comments from '../../../components/blog/comment'
 
-const BlogPost = ({ detail, cate, query }) => {
+const BlogPost = ({ detail, cate, query, all }) => {
   return (
     <div>
       <Head>
@@ -25,7 +25,7 @@ const BlogPost = ({ detail, cate, query }) => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://sunhodev.com/meta-sunhodev.png" />
       </Head>
-      <BlogLayout cate={cate}>
+      <BlogLayout cate={cate} all = {all}>
         <BlogDetail detail={detail} />
         <Comments />
       </BlogLayout>
@@ -38,10 +38,12 @@ BlogPost.getInitialProps = async (context) => {
   const response = await axios.get(
     `http://localhost:3000/api/blog/${query.id}?cate=${query.cate}`
   )
+  const forCnt = await axios.get('http://localhost:3000/api/blog')
   return {
     detail: response.data.detail,
     cate: response.data.cate,
     query: query,
+    all: forCnt.data.all,
   }
 }
 
